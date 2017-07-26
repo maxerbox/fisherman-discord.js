@@ -1,7 +1,7 @@
 {
   "name": "fisherman-discord.js",
   "version": "1.0.0",
-  "description": "A Discord Command Router | Discord.js library base",
+  "description": "Fisherman: A Discord command router, inspired by expressjs | Discord.js library base",
   "main": "lib/fisherman.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
