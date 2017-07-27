@@ -7,6 +7,7 @@
     },
     "app" : {
         "title":"Fisherman discord.js",
-        "server": "github"
+        "server": "github",
+        "base": "/fisherman-discord.js/"
     }
 }
