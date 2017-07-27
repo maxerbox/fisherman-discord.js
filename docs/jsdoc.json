@@ -1560,11 +1560,11 @@
     "$longname": "FisherRegister.FisherRegister"
   },
   {
-    "comment": "/**\r\n     * Creates an instance of FisherRequest.\r\n     * @param {fisherman} client\r\n     */",
+    "comment": "/**\r\n     * Creates an instance of FisherRequest.\r\n     * @param {Fisherman} client\r\n     */",
     "meta": {
       "range": [
         158,
-        1484
+        1493
       ],
       "filename": "request.js",
       "lineno": 9,
@@ -1587,7 +1587,7 @@
       {
         "type": {
           "names": [
-            "fisherman"
+            "Fisherman"
           ]
         },
         "name": "client"
@@ -1623,7 +1623,7 @@
         "$longname": "FisherRequest#channel"
       },
       {
-        "comment": "/**\r\n         * The dicord.js client\r\n         * @name FisherRequest#client\r\n         * @type {Client}\r\n         */",
+        "comment": "/**\r\n         * The Fisherman client\r\n         * @name FisherRequest#client\r\n         * @type {Fisherman}\r\n         */",
         "meta": {
           "filename": "request.js",
           "lineno": 53,
@@ -1631,11 +1631,11 @@
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\router",
           "code": {}
         },
-        "description": "The dicord.js client",
+        "description": "The Fisherman client",
         "name": "client",
         "type": {
           "names": [
-            "Client"
+            "Fisherman"
           ]
         },
         "memberof": "FisherRequest",
@@ -1645,7 +1645,7 @@
         "$longname": "FisherRequest#client"
       },
       {
-        "comment": "/**\r\n         * the command if there is one\r\n         * @name FisherRequest#command\r\n         * @type {command}\r\n         * @default null\r\n         */",
+        "comment": "/**\r\n         * the command if there is one\r\n         * @name FisherRequest#command\r\n         * @type {Command}\r\n         * @default null\r\n         */",
         "meta": {
           "filename": "request.js",
           "lineno": 18,
@@ -1657,7 +1657,7 @@
         "name": "command",
         "type": {
           "names": [
-            "command"
+            "Command"
           ]
         },
         "defaultvalue": "null",
@@ -1738,7 +1738,7 @@
         "$longname": "FisherRequest#prefix"
       },
       {
-        "comment": "/**\r\n         * the register of the command\r\n         * @name FisherRequest#register\r\n         * @type {register}\r\n         * @default null\r\n         */",
+        "comment": "/**\r\n         * the register of the command\r\n         * @name FisherRequest#register\r\n         * @type {FisherRegister}\r\n         * @default null\r\n         */",
         "meta": {
           "filename": "request.js",
           "lineno": 25,
@@ -1750,7 +1750,7 @@
         "name": "register",
         "type": {
           "names": [
-            "register"
+            "FisherRegister"
           ]
         },
         "defaultvalue": "null",
@@ -1763,7 +1763,7 @@
     ]
   },
   {
-    "comment": "/**\r\n     * Creates an instance of FisherResponse.\r\n     * @param {fisherman} client\r\n     * @param {fisherRouter} router\r\n     * @memberof FisherResponse\r\n     */",
+    "comment": "/**\r\n     * Creates an instance of FisherResponse.\r\n     * @param {Fisherman} client\r\n     * @param {FisherRouter} router\r\n     * @memberof FisherResponse\r\n     */",
     "meta": {
       "range": [
         239,
@@ -1791,7 +1791,7 @@
       {
         "type": {
           "names": [
-            "fisherman"
+            "Fisherman"
           ]
         },
         "name": "client"
@@ -1799,7 +1799,7 @@
       {
         "type": {
           "names": [
-            "fisherRouter"
+            "FisherRouter"
           ]
         },
         "name": "router"
@@ -1816,8 +1816,8 @@
     "comment": "/**\r\n     *\r\n     * Same as channel.send()\r\n     * @see https://discord.js.org/#/docs/main/stable/class/TextChannel?scrollTo=send\r\n     * @param {string} text\r\n     * @param {Object} [data={}]\r\n     * @returns {Promise<Message|Message[]>}\r\n     * @memberof FisherResponse\r\n     */",
     "meta": {
       "range": [
-        1276,
-        1362
+        1310,
+        1396
       ],
       "filename": "response.js",
       "lineno": 52,
@@ -1877,11 +1877,11 @@
     "$longname": "FisherResponse#send"
   },
   {
-    "comment": "/**\r\n     *\r\n     * Emit a \"fisherCode\" event\r\n     * @param {(number|fisherCode)} code\r\n     * @param {Error} [err=null]\r\n     * @fires Fisherman#fisherCode\r\n     * @memberof FisherResponse\r\n     */",
+    "comment": "/**\r\n     *\r\n     * Emit a \"fisherCode\" event\r\n     * @param {(number|FisherCode)} code The code to send\r\n     * @param {Error} [err=null] An error to pass\r\n     * @fires Fisherman#fisherCode\r\n     * @memberof FisherResponse\r\n     */",
     "meta": {
       "range": [
-        692,
-        984
+        726,
+        1018
       ],
       "filename": "response.js",
       "lineno": 33,
@@ -1906,9 +1906,10 @@
         "type": {
           "names": [
             "number",
-            "fisherCode"
+            "FisherCode"
           ]
         },
+        "description": "The code to send",
         "name": "code"
       },
       {
@@ -1919,6 +1920,7 @@
         },
         "optional": true,
         "defaultvalue": null,
+        "description": "An error to pass",
         "name": "err"
       }
     ],
@@ -1933,7 +1935,7 @@
     "$longname": "FisherResponse#sendCode"
   },
   {
-    "comment": "/**\r\n     * Build a router from a discord.js message\r\n     *\r\n     * @static\r\n     * @param {fisherman} client The fisherman instance\r\n     * @param {Message} message Discord.js message\r\n     * @return {FisherRouter}\r\n     * @memberof FisherRouter\r\n     */",
+    "comment": "/**\r\n     * Build a router from a discord.js message\r\n     *\r\n     * @static\r\n     * @param {Fisherman} client The fisherman instance\r\n     * @param {Message} message Discord.js message\r\n     * @return {FisherRouter}\r\n     * @memberof FisherRouter\r\n     */",
     "meta": {
       "range": [
         1118,
@@ -1962,7 +1964,7 @@
       {
         "type": {
           "names": [
-            "fisherman"
+            "Fisherman"
           ]
         },
         "description": "The fisherman instance",
@@ -1994,7 +1996,7 @@
     "$longname": "FisherRouter.buildFromMessage"
   },
   {
-    "comment": "/**\r\n     * Creates an instance of FisherRouter.\r\n     * @param {fisherman} client\r\n     * @memberof FisherRouter\r\n     */",
+    "comment": "/**\r\n     * Creates an instance of FisherRouter.\r\n     * @param {Fisherman} client\r\n     * @memberof FisherRouter\r\n     */",
     "meta": {
       "range": [
         284,
@@ -2021,7 +2023,7 @@
       {
         "type": {
           "names": [
-            "fisherman"
+            "Fisherman"
           ]
         },
         "name": "client"
@@ -2035,7 +2037,7 @@
     "$longname": "FisherRouter.FisherRouter"
   },
   {
-    "comment": "/**\r\n         * The fisherman client that instantied the router\r\n         * @name FisherRouter#client\r\n         * @type {fisherman}\r\n         */",
+    "comment": "/**\r\n         * The fisherman client that instantied the router\r\n         * @name FisherRouter#client\r\n         * @type {Fisherman}\r\n         */",
     "meta": {
       "filename": "router.js",
       "lineno": 15,
@@ -2047,7 +2049,7 @@
     "name": "client",
     "type": {
       "names": [
-        "fisherman"
+        "Fisherman"
       ]
     },
     "memberof": "FisherRouter",
