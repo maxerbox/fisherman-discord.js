@@ -562,6 +562,128 @@
     "$longname": "fisherCallback"
   },
   {
+    "comment": "/**\r\n * A list of the FisherCode triggered\r\n * @typedef {Object} FisherCode\r\n * @property {number} [COMMAND_SUCESS=200] When the command sucessed (sent only with a Promise command).\r\n * @property {number} [ALIAS_COMMAND=300] If enabled, send a code when a alias is found.\r\n * @property {number} [INVALID_PATNERN=303] Sent when the patnern is not respected, allow to send an \"usage\" of the command.\r\n * @property {number} [INVALID_CHANNEL_TYPE=400] If this is not the right type of channel, it sends a 300 code.\r\n * @property {number} [MISSING_LOCALES_PERMISSIONS=401] Used for middleware, for missing local permissions.\r\n * @property {number} [MISSING_DISCORD_PERMISSIONS=403] If the command require special discord permissions, like send messages in the channel, and the bot don't have them, a 403 code is sent. >See https://discord.js.org/#/docs/main/stable/class/Permissions?scrollTo=s-FLAGS\r\n * @property {number} [COMMAND_NOT_FOUND=404] If enabled, send a 404 code when the command is not found.\r\n * @property {number} [COMMAND_FAILED=500] When the command failed, with a reject() promise, or an error is thrown\r\n * @property {number} [MIDDLEWARE_FAILED=503] When an error is passed in the middleware callback, or an error is thrown\r\n */",
+    "meta": {
+      "filename": "FisherCodes.js",
+      "lineno": 1,
+      "columnno": 0,
+      "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\util",
+      "code": {}
+    },
+    "description": "A list of the FisherCode triggered",
+    "kind": "typedef",
+    "name": "FisherCode",
+    "type": {
+      "names": [
+        "Object"
+      ]
+    },
+    "properties": [
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": 200,
+        "description": "When the command sucessed (sent only with a Promise command).",
+        "name": "COMMAND_SUCESS"
+      },
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": 300,
+        "description": "If enabled, send a code when a alias is found.",
+        "name": "ALIAS_COMMAND"
+      },
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": 303,
+        "description": "Sent when the patnern is not respected, allow to send an \"usage\" of the command.",
+        "name": "INVALID_PATNERN"
+      },
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": 400,
+        "description": "If this is not the right type of channel, it sends a 300 code.",
+        "name": "INVALID_CHANNEL_TYPE"
+      },
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": 401,
+        "description": "Used for middleware, for missing local permissions.",
+        "name": "MISSING_LOCALES_PERMISSIONS"
+      },
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": 403,
+        "description": "If the command require special discord permissions, like send messages in the channel, and the bot don't have them, a 403 code is sent. >See https://discord.js.org/#/docs/main/stable/class/Permissions?scrollTo=s-FLAGS",
+        "name": "MISSING_DISCORD_PERMISSIONS"
+      },
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": 404,
+        "description": "If enabled, send a 404 code when the command is not found.",
+        "name": "COMMAND_NOT_FOUND"
+      },
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": 500,
+        "description": "When the command failed, with a reject() promise, or an error is thrown",
+        "name": "COMMAND_FAILED"
+      },
+      {
+        "type": {
+          "names": [
+            "number"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": 503,
+        "description": "When an error is passed in the middleware callback, or an error is thrown",
+        "name": "MIDDLEWARE_FAILED"
+      }
+    ],
+    "longname": "FisherCode",
+    "scope": "global",
+    "$longname": "FisherCode"
+  },
+  {
     "comment": "/**\r\n * The main fisherman class, to create commands and interact with them\r\n * @author Maxerbox | Simon Sassi 2017\r\n * @extends {EventEmitter}\r\n * @class Fisherman\r\n */",
     "meta": {
       "filename": "fisherman.js",
@@ -2202,30 +2324,7 @@
     "$longname": "InvalidPatternException.InvalidPatternException"
   },
   {
-    "comment": "/**\r\n * A list of the FisherCode triggered\r\n * @typedef {Object} FisherCode\r\n * @constant {number} [COMMAND_SUCESS=200] When the command sucessed (sent only with a Promise command).\r\n * @constant {number} [ALIAS_COMMAND=300] If enabled, send a code when a alias is found.\r\n * @constant {number} [INVALID_PATNERN=303] Sent when the patnern is not respected, allow to send an \"usage\" of the command.\r\n * @constant {number} [INVALID_CHANNEL_TYPE=400] If this is not the right type of channel, it sends a 300 code.\r\n * @constant {number} [MISSING_LOCALES_PERMISSIONS=401] Used for middleware, for missing local permissions.\r\n * @constant {number} [MISSING_DISCORD_PERMISSIONS=403] If the command require special discord permissions, like send messages in the channel, and the bot don't have them, a 403 code is sent. >See https://discord.js.org/#/docs/main/stable/class/Permissions?scrollTo=s-FLAGS\r\n * @constant {number} [COMMAND_NOT_FOUND=404] If enabled, send a 404 code when the command is not found.\r\n * @constant {number} [COMMAND_FAILED=500] When the command failed, with a reject() promise, or an error is thrown\r\n * @constant {number} [MIDDLEWARE_FAILED=503] When an error is passed in the middleware callback, or an error is thrown\r\n */",
-    "meta": {
-      "filename": "FisherCodes.js",
-      "lineno": 1,
-      "columnno": 0,
-      "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\util",
-      "code": {}
-    },
-    "description": "A list of the FisherCode triggered",
-    "kind": "constant",
-    "name": "MIDDLEWARE_FAILED",
-    "type": {
-      "names": [
-        "Object"
-      ]
-    },
-    "optional": true,
-    "defaultvalue": 200,
-    "longname": "MIDDLEWARE_FAILED",
-    "scope": "global",
-    "$longname": "MIDDLEWARE_FAILED"
-  },
-  {
-    "comment": "/**\r\n * An missingPermissionsException, when the command require special discord permissions\r\n * \r\n * @class missingPermissionsException\r\n * @extends {Error}\r\n */",
+    "comment": "/**\r\n * An MissingPermissionsException, when the command require special discord permissions\r\n *\r\n * @class MissingPermissionsException\r\n * @extends {Error}\r\n */",
     "meta": {
       "filename": "MissingPermissionsException.js",
       "lineno": 1,
@@ -2233,18 +2332,18 @@
       "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\exceptions",
       "code": {}
     },
-    "description": "An missingPermissionsException, when the command require special discord permissions",
+    "description": "An MissingPermissionsException, when the command require special discord permissions",
     "kind": "class",
-    "name": "missingPermissionsException",
+    "name": "MissingPermissionsException",
     "augments": [
       "Error"
     ],
-    "longname": "missingPermissionsException",
+    "longname": "MissingPermissionsException",
     "scope": "global",
-    "$longname": "missingPermissionsException",
+    "$longname": "MissingPermissionsException",
     "$members": [
       {
-        "comment": "/**\r\n         * The fisherCode\r\n         * @type {number}\r\n         * @readonly\r\n         * @name missingPermissionsException#code\r\n         * @constant\r\n         * @default 403\r\n         */",
+        "comment": "/**\r\n         * The fisherCode\r\n         * @type {number}\r\n         * @readonly\r\n         * @name MissingPermissionsException#code\r\n         * @constant\r\n         * @default 403\r\n         */",
         "meta": {
           "filename": "MissingPermissionsException.js",
           "lineno": 22,
@@ -2262,13 +2361,13 @@
         "name": "code",
         "kind": "constant",
         "defaultvalue": "403",
-        "memberof": "missingPermissionsException",
-        "longname": "missingPermissionsException#code",
+        "memberof": "MissingPermissionsException",
+        "longname": "MissingPermissionsException#code",
         "scope": "instance",
-        "$longname": "missingPermissionsException#code"
+        "$longname": "MissingPermissionsException#code"
       },
       {
-        "comment": "/**\r\n         * The missing permissions\r\n         * @type {(Array|string)}\r\n         * @name missingPermissionsException#missingPermissions\r\n         * @readonly\r\n         */",
+        "comment": "/**\r\n         * The missing permissions\r\n         * @type {(Array|string)}\r\n         * @name MissingPermissionsException#missingPermissions\r\n         * @readonly\r\n         */",
         "meta": {
           "filename": "MissingPermissionsException.js",
           "lineno": 15,
@@ -2285,28 +2384,28 @@
         },
         "name": "missingPermissions",
         "readonly": true,
-        "memberof": "missingPermissionsException",
-        "longname": "missingPermissionsException#missingPermissions",
+        "memberof": "MissingPermissionsException",
+        "longname": "MissingPermissionsException#missingPermissions",
         "scope": "instance",
         "kind": "member",
-        "$longname": "missingPermissionsException#missingPermissions"
+        "$longname": "MissingPermissionsException#missingPermissions"
       }
     ]
   },
   {
-    "comment": "/**\r\n     * Creates an instance of missingPermissionsException.\r\n     * @param {(Array<string>|string)} [missing=null] the missing perms\r\n     * @memberof missingPermissionsException\r\n     */",
+    "comment": "/**\r\n     * Creates an instance of MissingPermissionsException.\r\n     * @param {(Array<string>|string)} [missing=null] the missing perms\r\n     * @memberof MissingPermissionsException\r\n     */",
     "meta": {
       "range": [
-        416,
-        988
+        413,
+        970
       ],
       "filename": "MissingPermissionsException.js",
       "lineno": 13,
-      "columnno": 4,
+      "columnno": 2,
       "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\exceptions",
       "code": {
         "id": "astnode100000117",
-        "name": "missingPermissionsException",
+        "name": "MissingPermissionsException",
         "type": "MethodDefinition",
         "paramnames": [
           "missing"
@@ -2316,7 +2415,7 @@
         "": null
       }
     },
-    "description": "Creates an instance of missingPermissionsException.",
+    "description": "Creates an instance of MissingPermissionsException.",
     "params": [
       {
         "type": {
@@ -2331,12 +2430,12 @@
         "name": "missing"
       }
     ],
-    "memberof": "missingPermissionsException",
-    "name": "missingPermissionsException",
-    "longname": "missingPermissionsException.missingPermissionsException",
+    "memberof": "MissingPermissionsException",
+    "name": "MissingPermissionsException",
+    "longname": "MissingPermissionsException.MissingPermissionsException",
     "kind": "class",
     "scope": "static",
-    "$longname": "missingPermissionsException.missingPermissionsException"
+    "$longname": "MissingPermissionsException.MissingPermissionsException"
   },
   {
     "kind": "package",
