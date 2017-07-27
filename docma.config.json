@@ -8,6 +8,6 @@
     "app" : {
         "title":"Fisherman discord.js",
         "server": "github",
-        "base": "/fisherman-discord.js/"
+        "base": "fisherman-discord.js/"
     }
 }
