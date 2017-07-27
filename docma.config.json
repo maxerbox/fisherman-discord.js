@@ -9,5 +9,12 @@
         "title":"Fisherman discord.js",
         "server": "github",
         "base": "fisherman-discord.js/"
+    },
+    "template": {
+        "options": {
+            "outline": "tree",
+            "symbolMeta": true,
+            "title": "Docs"
+        }
     }
 }
