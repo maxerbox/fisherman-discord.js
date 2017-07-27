@@ -1,4 +1,12 @@
 {
     "src": "./lib/**/*.js",
-    "dest": "./docs"
+    "dest": "./docs",
+    "debug": true,
+    "jsdoc": {
+        "package": "./package.json"
+    },
+    "app" : {
+        "title":"Fisherman discord.js",
+        "base": "/fisherman-discord.js"
+    }
 }
