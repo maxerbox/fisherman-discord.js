@@ -9,7 +9,7 @@
 <pre><code class="lang-javascript">const fisherman = require("fisherman-discord.js")
 </code></pre>
 <h2 id="setting-up-the-fisherman-client-and-authentificating-it">Setting up the fisherman client and authentificating it</h2>
-<p>You have to first create a <strong>new fisherman instance</strong> and set up the <a href="options">options</a></p>
+<p>You have to first create a <strong>new fisherman instance</strong> and set up the <a href="https://maxerbox.github.io/fisherman-discord.js/?api=fisherman#FishermanOptions">options</a></p>
 <pre><code class="lang-javascript">var bot = new fisherman.Fisherman({prefixes: ["cat!"], ownerID: "7986546546547987", clientOptions: {messageCacheMaxSize: 2}}) //options are passed here, here the bot will
 //proceed all the messages starting the "cat". Also, the discord.js client will not cache more than 2 messages.
 
@@ -72,7 +72,7 @@ var command = {
 register.addCommand(command);
 </code></pre>
 <h2 id="command-options">Command options</h2>
-<p>The command options are available <a href="">here</a></p>
+<p>The command options are available <a href="https://maxerbox.github.io/fisherman-discord.js/?api=fisherman#DefaultCommandOptions">here</a></p>
 <h3 id="aliases">Aliases</h3>
 <p>What is an aliase ? Aliase are used to trigger a same command but with a different name</p>
 <p>Example:</p>
@@ -129,9 +129,9 @@ register.textCommand('matchCats', {patternCallback: objectMatching}, function (r
 </code></pre>
 <p>Pattern Callback is useful for custom matching with middlewares/plugins</p>
 <h2 id="locales">Locales</h2>
-<p>The "locales" option is used by middlewares, to save data for them, see <a href="https://github.com/maxerbox/required-prefixe-fisherman">required-prefixe-fisherman</a> for an example</p>
+<p>The "locales" option is used by middlewares to save data for them, see <a href="https://github.com/maxerbox/required-prefixe-fisherman">required-prefixe-fisherman</a> for an example</p>
 <h2 id="fisherman-options">Fisherman options</h2>
-<p>The fisherman options are available <a href="">here</a></p>
+<p>The fisherman options are available <a href="https://maxerbox.github.io/fisherman-discord.js/?api=fisherman#FishermanOptions">here</a></p>
 <h2 id="add-middleware">Add middleware</h2>
 <pre><code class="lang-javascript">bot.use(middleware)
 </code></pre>

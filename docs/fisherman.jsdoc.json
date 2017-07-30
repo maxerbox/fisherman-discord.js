@@ -1441,7 +1441,7 @@
     "$longname": "Fisherman.Fisherman"
   },
   {
-    "comment": "/**\r\n * @typedef {Object} FishermanOptions The fisherman's options\r\n * @param {(string|string[])} [prefixes=null] A string or an array of prefixes. If it's set to null, only the mention the bot will be used\r\n * @param {string} [ownerID=null] The discord owner's id\r\n * @param {string} [commandMatchRegExp=RegStringExpression] Nothing to change here, that's the regex expression used to slipt the command and the suffixe\r\n * @param {boolean} [sendAliasStatus=false] If it's set to true, it will emit the code ALIAS_COMMAND: 300 when an alias is used\r\n * @param {boolean} [sendNotFoundStatus=false] If it's set to true, it will emit the code COMMAND_NOT_FOUND: 404 when athe command is not found\r\n * @param {boolean} [selfMessageProcessing=false] If enabled, the bot will proceed his own messages as command, and the middleware loop will handle them.\r\n * @param {Object} clientOptions The options to pass to the client, see https://discord.js.org/#/docs/main/stable/typedef/ClientOptions\r\n * @param {Client} [client=null] *Required. The discord.js clien. See >> https://discord.js.org/#/docs/main/stable/class/Client\r\n */",
+    "comment": "/**\r\n * @typedef {Object} FishermanOptions The fisherman's options\r\n * @param {(string|string[])} [prefixes=null] A string or an array of prefixes. If it's set to null, only the mention the bot will be used\r\n * @param {string} [ownerID=null] The discord owner's id\r\n * @param {string} [commandMatchRegExp=string] Nothing to change here, that's the regex expression used to slipt the command and the suffixe\r\n * @param {boolean} [sendAliasStatus=false] If it's set to true, it will emit the code ALIAS_COMMAND: 300 when an alias is used\r\n * @param {boolean} [sendNotFoundStatus=false] If it's set to true, it will emit the code COMMAND_NOT_FOUND: 404 when athe command is not found\r\n * @param {boolean} [selfMessageProcessing=false] If enabled, the bot will proceed his own messages as command, and the middleware loop will handle them.\r\n * @param {Object} [clientOptions={}] The options to pass to the client, see https://discord.js.org/#/docs/main/stable/typedef/ClientOptions\r\n * @param {Client} [client=null] *Required. The discord.js clien. See >> https://discord.js.org/#/docs/main/stable/class/Client\r\n */",
     "meta": {
       "filename": "FishermanOptions.js",
       "lineno": 1,
@@ -1488,7 +1488,7 @@
           ]
         },
         "optional": true,
-        "defaultvalue": "RegStringExpression",
+        "defaultvalue": "string",
         "description": "Nothing to change here, that's the regex expression used to slipt the command and the suffixe",
         "name": "commandMatchRegExp"
       },
@@ -1531,6 +1531,8 @@
             "Object"
           ]
         },
+        "optional": true,
+        "defaultvalue": "{}",
         "description": "The options to pass to the client, see https://discord.js.org/#/docs/main/stable/typedef/ClientOptions",
         "name": "clientOptions"
       },
