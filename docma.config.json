@@ -4,11 +4,11 @@
             "fisherman": "./lib/**/*.js"
         },
         {
-            "guide": "./README.md",
+            "guide": "./HOME.md",
             "tutorial": "./TUTORIAL.md"
         },
         {
-            "middleware_tutorial" : "./MIDDLEWARE.md",
+            "middleware_tutorial": "./MIDDLEWARE.md",
             "middleware_list": "./middlewareLIST.md"
         }
     ],
@@ -21,7 +21,22 @@
         "title": "Fisherman discord.js",
         "server": "static",
         "base": "/fisherman-discord.js",
-        "entrance": "content:guide"
+        "entrance": "content:guide",
+        "meta": [
+            {
+                "property": "og:title",
+                "content": "Fisherman - discord.js"
+            },
+            {
+                "property": "og:description",
+                "content": "A lightweight, fast, and powerful discord command router writed in javascript standard style and inspired by expressjs"
+            }
+            ,
+            {
+                "property": "og:image",
+                "content": "https://cdn.rawgit.com/maxerbox/fisherman-discord.js/dfc8afbe/logo.png"
+            }
+        ]
     },
     "template": {
         "options": {

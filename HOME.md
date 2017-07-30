@@ -1,12 +1,8 @@
-<h1 align="center"><br><br><img width="500" src="https://cdn.rawgit.com/maxerbox/fisherman-discord.js/dfc8afbe/logo.png" alt="fisherman"><br><br><br></h1>
-
-# Fisherman - Discord.js
+# Fisherman 🎣 - Discord.js
 
 > Copyright © 2017, Simon Sassi
 
 ## What is Fisherman
-
-<h3 align="center"><img width="100" src="https://avatars3.githubusercontent.com/u/29208316?v=4&s=400" alt="standard-js"><br><br></h3>
 
  > *a lightweight, fast, and powerful discord command router* writed in javascript standard style and inspired by expressjs
 
@@ -34,8 +30,6 @@ bot.on('fisherCode', function (router, code, err) { //displaying the fishercodes
 ## Documentation
 
 [Quick tutorial](https://maxerbox.github.io/fisherman-discord.js/?content=tutorial)
-
-[Documentation link](https://maxerbox.github.io/fisherman-discord.js/)
 
 [Api docs](https://maxerbox.github.io/fisherman-discord.js/?api=fisherman)
 
