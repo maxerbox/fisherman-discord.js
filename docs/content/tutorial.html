@@ -138,7 +138,7 @@ register.textCommand('matchCats', {patternCallback: objectMatching}, function (r
 <h2 id="handling-fishercodes">Handling FisherCodes</h2>
 <p>A list of Fisher codes is available <a href="https://maxerbox.github.io/fisherman-discord.js/?api=fisherman#FisherCode">here</a></p>
 <p>A switch statement can be useful on the variable code</p>
-<pre><code class="lang-javascript">bot.on('fisherCode', function (router, code, err) { 
+<pre><code class="lang-javascript">bot.on('fisherCode', function (router, code, err) {
   router.response.send('fisherCode ' + code + '\nError message: ' + err.message)
 })
 </code></pre>
