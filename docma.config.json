@@ -8,12 +8,5 @@
     "app" : {
         "title":"Fisherman discord.js",
         "server": "github"
-    },
-    "template": {
-        "options": {
-            "outline": "tree",
-            "symbolMeta": true,
-            "title": "Docs"
-        }
     }
 }
