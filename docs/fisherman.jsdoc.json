@@ -2945,12 +2945,12 @@
         "type": "ISC"
       }
     ],
-    "main": "lib/fisherman.js",
+    "main": "./index.js",
     "repository": {
       "type": "git",
       "url": "https://github.com/maxerbox/fisherman-discord.js.git"
     },
-    "version": "1.0.0c",
+    "version": "1.0.0d",
     "$longname": "package:fisherman-discord.js"
   },
   {
