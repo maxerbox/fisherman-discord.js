@@ -1,8 +1,12 @@
+<h1 align="center"><br><br><img width="320" src="https://cdn.rawgit.com/chalk/chalk/19935d6484811c5e468817f846b7b3d417d7bf4a/logo.svg" alt="chalk"><br><br><br></h1>
+
 # Fisherman - Discord.js
+
+> Copyright © 2017, Simon Sassi
 
 ## What is Fisherman
 
-Fisherman is *a lightweight, fast, and powerful discord command router* writed in javascript language style
+ > *a lightweight, fast, and powerful discord command router* writed in javascript language style
 
 ```javascript
 var bot = new fisherMan.Fisherman({ prefixes: ['fish!'] }) // creating a client, with the prefixe "fish!"
