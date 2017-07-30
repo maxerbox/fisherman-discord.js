@@ -1,20 +1,71 @@
 {
-    "src": "./lib/**/*.js",
+    "src": [
+        {
+            "fisherman": "./lib/**/*.js"
+        },
+        {
+            "guilde": "./README.md"
+        }
+    ],
     "dest": "./docs",
     "debug": true,
     "jsdoc": {
         "package": "./package.json"
     },
-    "app" : {
-        "title":"Fisherman discord.js",
+    "app": {
+        "title": "Fisherman discord.js",
         "server": "static",
-        "base": "/fisherman-discord.js"
+        "base": "/fisherman-discord.js",
+        "entrance": "content:guide"
     },
     "template": {
         "options": {
             "outline": "tree",
             "symbolMeta": true,
-            "title": "Docs"
+            "title": "Docs",
+            "navItems": [
+                {
+                    "iconClass": "ico-book",
+                    "label": "Fisherman Docs",
+                    "items": [
+                        {
+                            "label": "Home",
+                            "href": "./"
+                        },
+                        {
+                            "label": "Quick tutorial",
+                            "href": "?content=tutorial"
+                        },
+                        {
+                            "separator": true
+                        },
+                        {
+                            "label": "Api docs",
+                            "href": "?api=fisherman"
+                        }
+                    ]
+                },
+                {
+                    "iconClass": "ico-book",
+                    "label": "Middlewares",
+                    "items": [
+                        {
+                            "label": "Creating a middleware",
+                            "href": "?content=middleware_tutorial"
+                        },
+                        {
+                            "label": "Middleware list",
+                            "href": "?content=middleware_list"
+                        }
+                    ]
+                },
+                {
+                    "iconClass": "ico-md ico-github",
+                    "label": "GitHub",
+                    "href": "https://github.com/maxerbox/fisherman-discord.js",
+                    "target": "_blank"
+                }
+            ]
         }
     }
 }
