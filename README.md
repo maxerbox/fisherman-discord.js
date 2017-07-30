@@ -1,4 +1,4 @@
-<h1 align="center"><br><br><img width="320" src="https://cdn.rawgit.com/maxerbox/fisherman-discord.js/dfc8afbe/logo.png" alt="chalk"><br><br><br></h1>
+<h1 align="center"><br><br><img width="500" src="https://cdn.rawgit.com/maxerbox/fisherman-discord.js/dfc8afbe/logo.png" alt="fisherman"><br><br><br></h1>
 
 # Fisherman - Discord.js
 
@@ -6,7 +6,9 @@
 
 ## What is Fisherman
 
- > *a lightweight, fast, and powerful discord command router* writed in javascript language style
+<h3 align="center"><img width="100" src="https://avatars3.githubusercontent.com/u/29208316?v=4&s=400" alt="standard-js"><br><br></h3>
+
+ > *a lightweight, fast, and powerful discord command router* writed in javascript standard style
 
 ```javascript
 var bot = new fisherMan.Fisherman({ prefixes: ['fish!'] }) // creating a client, with the prefixe "fish!"
