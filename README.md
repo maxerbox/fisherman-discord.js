@@ -1,4 +1,4 @@
-<h1 align="center"><br><br><img width="320" src="https://cdn.rawgit.com/chalk/chalk/19935d6484811c5e468817f846b7b3d417d7bf4a/logo.svg" alt="chalk"><br><br><br></h1>
+<h1 align="center"><br><br><img width="320" src="https://cdn.rawgit.com/maxerbox/fisherman-discord.js/dfc8afbe/logo.png" alt="chalk"><br><br><br></h1>
 
 # Fisherman - Discord.js
 
