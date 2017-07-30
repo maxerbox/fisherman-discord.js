@@ -203,7 +203,7 @@ A list of Fisher codes is available [here](https://maxerbox.github.io/fisherman-
 A switch statement can be useful on the variable code
 
 ```javascript
-bot.on('fisherCode', function (router, code, err) { 
+bot.on('fisherCode', function (router, code, err) {
   router.response.send('fisherCode ' + code + '\nError message: ' + err.message)
 })
 ```
