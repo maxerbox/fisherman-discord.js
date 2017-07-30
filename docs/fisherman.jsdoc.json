@@ -17,11 +17,11 @@
     "$longname": "AbstractMiddleware",
     "$members": [
       {
-        "comment": "/**\r\n     *  Called when a message is handled by fisherman\r\n     * @param {fisherRequest} request\r\n     * @param {fisherResponse} response\r\n     * @param {function} next An waterfall callback, used to pass parameters. Example: next(err=null, res, req); To stop the middleware chain, use callback(true);\r\n     * @memberof AbstractMiddleware\r\n     */",
+        "comment": "/**\r\n     *  Called when a message is handled by fisherman\r\n     * @param {FisherRequest} request A FisherRequest\r\n     * @param {FisherResponse} response A FisherResponse\r\n     * @param {function} next A waterfall callback, used to pass parameters. Example: next(err=null, res, req); To stop the middleware chain, use callback(true);\r\n     * @memberof AbstractMiddleware\r\n     */",
         "meta": {
           "range": [
-            882,
-            923
+            914,
+            955
           ],
           "filename": "AbstractMiddleware.js",
           "lineno": 25,
@@ -46,17 +46,19 @@
           {
             "type": {
               "names": [
-                "fisherRequest"
+                "FisherRequest"
               ]
             },
+            "description": "A FisherRequest",
             "name": "request"
           },
           {
             "type": {
               "names": [
-                "fisherResponse"
+                "FisherResponse"
               ]
             },
+            "description": "A FisherResponse",
             "name": "response"
           },
           {
@@ -65,7 +67,7 @@
                 "function"
               ]
             },
-            "description": "An waterfall callback, used to pass parameters. Example: next(err=null, res, req); To stop the middleware chain, use callback(true);",
+            "description": "A waterfall callback, used to pass parameters. Example: next(err=null, res, req); To stop the middleware chain, use callback(true);",
             "name": "next"
           }
         ],
@@ -77,7 +79,7 @@
         "$longname": "AbstractMiddleware#handle"
       },
       {
-        "comment": "/**\r\n     * Called when the the init function of fisherman is used\r\n     * @param {fisherman} client The fisherman instance\r\n     * @param {function} next An async callback;\r\n     * @memberof AbstractMiddleware\r\n     */",
+        "comment": "/**\r\n     * Called when the the init function of fisherman is used\r\n     * @param {Fisherman} client The fisherman instance\r\n     * @param {function} next An async callback;\r\n     * @memberof AbstractMiddleware\r\n     */",
         "meta": {
           "range": [
             497,
@@ -105,7 +107,7 @@
           {
             "type": {
               "names": [
-                "fisherman"
+                "Fisherman"
               ]
             },
             "description": "The fisherman instance",
@@ -916,8 +918,8 @@
         "comment": "/**\r\n     * Create a Fisherman instance from an already logged in discord.js client\r\n     *\r\n     * @static\r\n     * @param {Client} client The discord.js client\r\n     * @param {FishermanOptions} fisherOptions The options for Fisherman\r\n     * @memberof Fisherman\r\n     */",
         "meta": {
           "range": [
-            3741,
-            3892
+            3769,
+            3920
           ],
           "filename": "fisherman.js",
           "lineno": 108,
@@ -963,28 +965,6 @@
         "longname": "Fisherman.createFromClient",
         "kind": "function",
         "$longname": "Fisherman.createFromClient"
-      },
-      {
-        "comment": "/**\r\n         * All the command registers handled by fisherman\r\n         * @name Fisherman#aliases\r\n         * @type {Map.<string, FisherRegister>}\r\n         */",
-        "meta": {
-          "filename": "fisherman.js",
-          "lineno": 53,
-          "columnno": 8,
-          "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
-          "code": {}
-        },
-        "description": "All the command registers handled by fisherman",
-        "name": "aliases",
-        "type": {
-          "names": [
-            "Map.<string, FisherRegister>"
-          ]
-        },
-        "memberof": "Fisherman",
-        "longname": "Fisherman#aliases",
-        "scope": "instance",
-        "kind": "member",
-        "$longname": "Fisherman#aliases"
       },
       {
         "comment": "/**\r\n         * All the command aliases handled by fisherman\r\n         * @name Fisherman#aliases\r\n         * @type {Map.<string, command>}\r\n         */",
@@ -1034,8 +1014,8 @@
         "comment": "/**\r\n     * Create a new register to add commands\r\n     * @fires Fisherman#registerAdded\r\n     * @param {string} keyName The register key value, to set in the registers map\r\n     * @param {string} [registerName=null] The register's name\r\n     * @param {string} [registerDescription=null] The register's description\r\n     * @return {FisherRegister} Return a FisherRegister instance\r\n     * @memberof Fisherman\r\n     */",
         "meta": {
           "range": [
-            9601,
-            9927
+            9629,
+            9955
           ],
           "filename": "fisherman.js",
           "lineno": 266,
@@ -1206,8 +1186,8 @@
         "comment": "/**\r\n     * Initialize Fisherman and the middlewares\r\n     * @param {string} [token=null] The token to log in with, optional if the client is already connected\r\n     * @param {function} callback An optional callback to trigger when Fisherman is initialized\r\n     * @memberof Fisherman\r\n     * @fires Fisherman#initialized\r\n     */",
         "meta": {
           "range": [
-            8396,
-            8817
+            8424,
+            8845
           ],
           "filename": "fisherman.js",
           "lineno": 227,
@@ -1260,11 +1240,33 @@
         "$longname": "Fisherman#init"
       },
       {
+        "comment": "/**\r\n         * All the command registers handled by fisherman\r\n         * @name Fisherman#registers\r\n         * @type {Map.<string, FisherRegister>}\r\n         */",
+        "meta": {
+          "filename": "fisherman.js",
+          "lineno": 53,
+          "columnno": 8,
+          "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
+          "code": {}
+        },
+        "description": "All the command registers handled by fisherman",
+        "name": "registers",
+        "type": {
+          "names": [
+            "Map.<string, FisherRegister>"
+          ]
+        },
+        "memberof": "Fisherman",
+        "longname": "Fisherman#registers",
+        "scope": "instance",
+        "kind": "member",
+        "$longname": "Fisherman#registers"
+      },
+      {
         "comment": "/**\r\n     * Set the options to fisherman\r\n     *\r\n     * @param {FishermanOptions} options\r\n     * @memberof Fisherman\r\n     */",
         "meta": {
           "range": [
-            2489,
-            2998
+            2517,
+            3026
           ],
           "filename": "fisherman.js",
           "lineno": 74,
@@ -1304,8 +1306,8 @@
         "comment": "/**\r\n     *\r\n     * Set the prefixe\r\n     * @param {(Array|string)} prefixes\r\n     * @memberof Fisherman\r\n     */",
         "meta": {
           "range": [
-            3123,
-            3460
+            3151,
+            3488
           ],
           "filename": "fisherman.js",
           "lineno": 92,
@@ -1343,11 +1345,11 @@
         "$longname": "Fisherman#setPrefixe"
       },
       {
-        "comment": "/**\r\n     *\r\n     * Add a middleware to Fisherman\r\n     * @param {function} middleware The middleware function|class\r\n     * @return {Fisherman}\r\n     * @memberof Fisherman\r\n     */",
+        "comment": "/**\r\n     *\r\n     * Add a middleware to Fisherman\r\n     * @param {(function|Object)} middleware The middleware function|class\r\n     * @return {Fisherman}\r\n     * @memberof Fisherman\r\n     */",
         "meta": {
           "range": [
-            10118,
-            10342
+            10155,
+            10379
           ],
           "filename": "fisherman.js",
           "lineno": 282,
@@ -1370,7 +1372,8 @@
           {
             "type": {
               "names": [
-                "function"
+                "function",
+                "Object"
               ]
             },
             "description": "The middleware function|class",
@@ -1396,11 +1399,11 @@
     ]
   },
   {
-    "comment": "/**\r\n     * Creates an instance of Fisherman.\r\n     * @param {FishermanOptions} options\r\n     * @memberof Fisherman\r\n     */",
+    "comment": "/**\r\n     * Creates an instance of Fisherman.\r\n     * @param {FishermanOptions} options The options for fisherman\r\n     * @memberof Fisherman\r\n     */",
     "meta": {
       "range": [
-        1015,
-        2352
+        1041,
+        2380
       ],
       "filename": "fisherman.js",
       "lineno": 25,
@@ -1426,6 +1429,7 @@
             "FishermanOptions"
           ]
         },
+        "description": "The options for fisherman",
         "name": "options"
       }
     ],
@@ -1435,6 +1439,116 @@
     "kind": "class",
     "scope": "static",
     "$longname": "Fisherman.Fisherman"
+  },
+  {
+    "comment": "/**\r\n * @typedef {Object} FishermanOptions The fisherman's options\r\n * @param {(string|string[])} [prefixes=null] A string or an array of prefixes. If it's set to null, only the mention the bot will be used\r\n * @param {string} [ownerID=null] The discord owner's id\r\n * @param {string} [commandMatchRegExp=RegStringExpression] Nothing to change here, that's the regex expression used to slipt the command and the suffixe\r\n * @param {boolean} [sendAliasStatus=false] If it's set to true, it will emit the code ALIAS_COMMAND: 300 when an alias is used\r\n * @param {boolean} [sendNotFoundStatus=false] If it's set to true, it will emit the code COMMAND_NOT_FOUND: 404 when athe command is not found\r\n * @param {boolean} [selfMessageProcessing=false] If enabled, the bot will proceed his own messages as command, and the middleware loop will handle them.\r\n * @param {Object} clientOptions The options to pass to the client, see https://discord.js.org/#/docs/main/stable/typedef/ClientOptions\r\n * @param {Client} [client=null] *Required. The discord.js clien. See >> https://discord.js.org/#/docs/main/stable/class/Client\r\n */",
+    "meta": {
+      "filename": "FishermanOptions.js",
+      "lineno": 1,
+      "columnno": 0,
+      "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\util",
+      "code": {}
+    },
+    "kind": "typedef",
+    "name": "FishermanOptions",
+    "type": {
+      "names": [
+        "Object"
+      ]
+    },
+    "description": "The fisherman's options",
+    "params": [
+      {
+        "type": {
+          "names": [
+            "string",
+            "Array.<string>"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": null,
+        "description": "A string or an array of prefixes. If it's set to null, only the mention the bot will be used",
+        "name": "prefixes"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": null,
+        "description": "The discord owner's id",
+        "name": "ownerID"
+      },
+      {
+        "type": {
+          "names": [
+            "string"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": "RegStringExpression",
+        "description": "Nothing to change here, that's the regex expression used to slipt the command and the suffixe",
+        "name": "commandMatchRegExp"
+      },
+      {
+        "type": {
+          "names": [
+            "boolean"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": false,
+        "description": "If it's set to true, it will emit the code ALIAS_COMMAND: 300 when an alias is used",
+        "name": "sendAliasStatus"
+      },
+      {
+        "type": {
+          "names": [
+            "boolean"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": false,
+        "description": "If it's set to true, it will emit the code COMMAND_NOT_FOUND: 404 when athe command is not found",
+        "name": "sendNotFoundStatus"
+      },
+      {
+        "type": {
+          "names": [
+            "boolean"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": false,
+        "description": "If enabled, the bot will proceed his own messages as command, and the middleware loop will handle them.",
+        "name": "selfMessageProcessing"
+      },
+      {
+        "type": {
+          "names": [
+            "Object"
+          ]
+        },
+        "description": "The options to pass to the client, see https://discord.js.org/#/docs/main/stable/typedef/ClientOptions",
+        "name": "clientOptions"
+      },
+      {
+        "type": {
+          "names": [
+            "Client"
+          ]
+        },
+        "optional": true,
+        "defaultvalue": null,
+        "description": "*Required. The discord.js clien. See >> https://discord.js.org/#/docs/main/stable/class/Client",
+        "name": "client"
+      }
+    ],
+    "longname": "FishermanOptions",
+    "scope": "global",
+    "$longname": "FishermanOptions"
   },
   {
     "comment": "/**\r\n * @typedef {function} FisherPromiseCallback The promise command's execution function with a promise callback\r\n * @param {fisherRequest} req A request object\r\n * @param {fisherResponse} res A response object\r\n * @param {function} resolve A promise resolve function\r\n * @param {function} reject A promise reject function\r\n */",
