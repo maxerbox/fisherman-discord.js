@@ -16,7 +16,7 @@ const fisherman = require("fisherman-discord.js")
 
 ## Setting up the fisherman client and authentificating it
 
-You have to first create a **new fisherman instance** and set up the [options](options)
+You have to first create a **new fisherman instance** and set up the [options](https://maxerbox.github.io/fisherman-discord.js/?api=fisherman#FishermanOptions)
 
 ```javascript
 var bot = new fisherman.Fisherman({prefixes: ["cat!"], ownerID: "7986546546547987", clientOptions: {messageCacheMaxSize: 2}}) //options are passed here, here the bot will
@@ -106,7 +106,7 @@ register.addCommand(command);
 
 ## Command options
 
-The command options are available [here]()
+The command options are available [here](https://maxerbox.github.io/fisherman-discord.js/?api=fisherman#DefaultCommandOptions)
 
 ### Aliases
 
@@ -188,7 +188,7 @@ The "locales" option is used by middlewares, to save data for them, see [require
 
 ## Fisherman options
 
-The fisherman options are available [here]()
+The fisherman options are available [here](https://maxerbox.github.io/fisherman-discord.js/?api=fisherman#FishermanOptions)
 
 ## Add middleware
 

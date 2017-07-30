@@ -1,6 +1,6 @@
 # Middleware list
 
-A list of middleware approuved :
+A list of middleware approved :
 
 | Name | Description | Author | Link |
 | ---- | ------------ | ----- | ----- |
@@ -8,4 +8,4 @@ A list of middleware approuved :
 
 ## Submitting a middleware
 
-### To submit a middleware, go on the fisherman discord server
+To submit a middleware, go on the fisherman discord server

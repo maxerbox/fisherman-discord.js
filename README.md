@@ -27,10 +27,12 @@ bot.on('fisherCode', function (router, code, err) { //displaying the fishercodes
 
 ## Documentation
 
-[Quick example](https://maxerbox.github.io/fisherman-discord.js/)
+[Quick tutorial](https://maxerbox.github.io/fisherman-discord.js/?content=tutorial)
 
 [Documentation link](https://maxerbox.github.io/fisherman-discord.js/)
 
+[Api docs](https://maxerbox.github.io/fisherman-discord.js/?api=fisherman)
+
 ## Middleware list
 
-[Simple required Prefixe execution](https://github.com/maxerbox/required-prefixe-fisherman)
+The middleware list is available [here](https://maxerbox.github.io/fisherman-discord.js/?content=middleware_list)

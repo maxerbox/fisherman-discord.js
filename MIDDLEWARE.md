@@ -88,4 +88,4 @@ bot.use(middleware) //var bot: the fisherman client
 
 ## Submitting a middleware to the list
 
-### To submit a middleware, go on the fisherman discord server
+To submit a middleware, go on the fisherman discord server
