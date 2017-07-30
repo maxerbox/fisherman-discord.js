@@ -4,7 +4,7 @@
             "fisherman": "./lib/**/*.js"
         },
         {
-            "guilde": "./README.md"
+            "guide": "./README.md"
         }
     ],
     "dest": "./docs",
