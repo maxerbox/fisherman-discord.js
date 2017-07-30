@@ -5,11 +5,11 @@
         },
         {
             "guide": "./README.md",
-            "tutorial": "./docs/tutorial.md"
+            "tutorial": "./TUTORIAL.md"
         },
         {
-            "middleware_tutorial" : "./docs/middleware.md",
-            "middleware_list": "./docs/middlewareList.md"
+            "middleware_tutorial" : "./MIDDLEWARE.md",
+            "middleware_list": "./middlewareLIST.md"
         }
     ],
     "dest": "./docs",
@@ -63,6 +63,12 @@
                             "href": "?content=middleware_list"
                         }
                     ]
+                },
+                {
+                    "iconClass": "ico-reply",
+                    "label": "Discord server",
+                    "href": "https://github.com/maxerbox/fisherman-discord.js",
+                    "target": "_blank"
                 },
                 {
                     "iconClass": "ico-md ico-github",
