@@ -521,16 +521,16 @@
     "$longname": "CommandNotFoundException.CommandNotFoundException"
   },
   {
-    "comment": "/**\r\n * @typedef {function} fisherCallback The command's execution function\r\n * @param {fisherRequest} req A request object\r\n * @param {fisherResponse} res A response object\r\n */",
+    "comment": "/**\r\n * @typedef {function} FisherCallback The command's execution function\r\n * @param {fisherRequest} req A request object\r\n * @param {fisherResponse} res A response object\r\n */",
     "meta": {
       "filename": "register.js",
-      "lineno": 152,
+      "lineno": 166,
       "columnno": 0,
       "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
       "code": {}
     },
     "kind": "typedef",
-    "name": "fisherCallback",
+    "name": "FisherCallback",
     "type": {
       "names": [
         "function"
@@ -557,9 +557,9 @@
         "name": "res"
       }
     ],
-    "longname": "fisherCallback",
+    "longname": "FisherCallback",
     "scope": "global",
-    "$longname": "fisherCallback"
+    "$longname": "FisherCallback"
   },
   {
     "comment": "/**\r\n * A list of the FisherCode triggered\r\n * @typedef {Object} FisherCode\r\n * @property {number} [COMMAND_SUCESS=200] When the command sucessed (sent only with a Promise command).\r\n * @property {number} [ALIAS_COMMAND=300] If enabled, send a code when a alias is found.\r\n * @property {number} [INVALID_PATNERN=303] Sent when the patnern is not respected, allow to send an \"usage\" of the command.\r\n * @property {number} [INVALID_CHANNEL_TYPE=400] If this is not the right type of channel, it sends a 300 code.\r\n * @property {number} [MISSING_LOCALES_PERMISSIONS=401] Used for middleware, for missing local permissions.\r\n * @property {number} [MISSING_DISCORD_PERMISSIONS=403] If the command require special discord permissions, like send messages in the channel, and the bot don't have them, a 403 code is sent. >See https://discord.js.org/#/docs/main/stable/class/Permissions?scrollTo=s-FLAGS\r\n * @property {number} [COMMAND_NOT_FOUND=404] If enabled, send a 404 code when the command is not found.\r\n * @property {number} [COMMAND_FAILED=500] When the command failed, with a reject() promise, or an error is thrown\r\n * @property {number} [MIDDLEWARE_FAILED=503] When an error is passed in the middleware callback, or an error is thrown\r\n */",
@@ -906,7 +906,7 @@
         "comment": "/**\r\n     * Emitted when a new command is added\r\n     * @event Fisherman#commandAdded\r\n     * @param {Command}\r\n     */",
         "meta": {
           "filename": "register.js",
-          "lineno": 99,
+          "lineno": 113,
           "columnno": 4,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {}
@@ -1230,16 +1230,16 @@
     "$longname": "Fisherman.Fisherman"
   },
   {
-    "comment": "/**\r\n * @typedef {function} fisherPromiseCallback The promise command's execution function with a promise callback\r\n * @param {fisherRequest} req A request object\r\n * @param {fisherResponse} res A response object\r\n * @param {function} resolve A promise resolve function\r\n * @param {function} reject A promise reject function\r\n */",
+    "comment": "/**\r\n * @typedef {function} FisherPromiseCallback The promise command's execution function with a promise callback\r\n * @param {fisherRequest} req A request object\r\n * @param {fisherResponse} res A response object\r\n * @param {function} resolve A promise resolve function\r\n * @param {function} reject A promise reject function\r\n */",
     "meta": {
       "filename": "register.js",
-      "lineno": 157,
+      "lineno": 171,
       "columnno": 0,
       "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
       "code": {}
     },
     "kind": "typedef",
-    "name": "fisherPromiseCallback",
+    "name": "FisherPromiseCallback",
     "type": {
       "names": [
         "function"
@@ -1284,9 +1284,9 @@
         "name": "reject"
       }
     ],
-    "longname": "fisherPromiseCallback",
+    "longname": "FisherPromiseCallback",
     "scope": "global",
-    "$longname": "fisherPromiseCallback"
+    "$longname": "FisherPromiseCallback"
   },
   {
     "comment": "/**\r\n * A register, to add commands to fisherman extending the Map class\r\n * @class FisherRegister\r\n * @extends {Map}\r\n */",
@@ -1308,14 +1308,89 @@
     "$longname": "FisherRegister",
     "$members": [
       {
-        "comment": "/**\r\n     * A command, specified by the name and the scope.\r\n     * @example command([\"dm\", \"text\"], \"cat\", null, function(req, res){});\r\n     * @param {(Array|string)} scope The channel type, can be an array or a string\r\n     * @param {any} name The command's name\r\n     * @param {defaultCommandOptions} options An option object, that will be asigned with defaultCommandOptions\r\n     * @param {function} callback A fisherCallback\r\n     * @memberof FisherRegister\r\n     */",
+        "comment": "/**\r\n     * Add a command to fisherman, through an object or an command class extending the abstract class \"Command\"\r\n     *\r\n     * @param {string} name The command's name, used as key in the command map\r\n     * @param {(Object|Command)} command An object, or a class extending the abstract class \"Command\"\r\n     * @memberof FisherRegister\r\n     */",
         "meta": {
           "range": [
-            2261,
-            2820
+            4502,
+            4636
           ],
           "filename": "register.js",
-          "lineno": 63,
+          "lineno": 108,
+          "columnno": 2,
+          "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
+          "code": {
+            "id": "astnode100001511",
+            "name": "FisherRegister#addCommand",
+            "type": "MethodDefinition",
+            "paramnames": [
+              "name",
+              "command"
+            ]
+          },
+          "vars": {
+            "": null
+          }
+        },
+        "description": "Add a command to fisherman, through an object or an command class extending the abstract class \"Command\"",
+        "params": [
+          {
+            "type": {
+              "names": [
+                "string"
+              ]
+            },
+            "description": "The command's name, used as key in the command map",
+            "name": "name"
+          },
+          {
+            "type": {
+              "names": [
+                "Object",
+                "Command"
+              ]
+            },
+            "description": "An object, or a class extending the abstract class \"Command\"",
+            "name": "command"
+          }
+        ],
+        "memberof": "FisherRegister",
+        "name": "addCommand",
+        "longname": "FisherRegister#addCommand",
+        "kind": "function",
+        "scope": "instance",
+        "$longname": "FisherRegister#addCommand"
+      },
+      {
+        "comment": "/**\r\n       * The fisherman client that instantied the register\r\n       * @name FisherRegister#client\r\n       * @type {Fisherman}\r\n       */",
+        "meta": {
+          "filename": "register.js",
+          "lineno": 18,
+          "columnno": 6,
+          "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
+          "code": {}
+        },
+        "description": "The fisherman client that instantied the register",
+        "name": "client",
+        "type": {
+          "names": [
+            "Fisherman"
+          ]
+        },
+        "memberof": "FisherRegister",
+        "longname": "FisherRegister#client",
+        "scope": "instance",
+        "kind": "member",
+        "$longname": "FisherRegister#client"
+      },
+      {
+        "comment": "/**\r\n     * A command, specified by the name and the scope.\r\n     * @example command([\"dm\", \"text\"], \"cat\", null, function(req, res){});\r\n     * @param {(string[]|string)} scope The channel type, can be an array or a string\r\n     * @param {string} name The command's name\r\n     * @param {DefaultCommandOptions} [options={}] An option object, that will be asigned with DefaultCommandOptions\r\n     * @param {FisherCallback} callback A FisherCallback\r\n     * @memberof FisherRegister\r\n     */",
+        "meta": {
+          "range": [
+            2437,
+            2996
+          ],
+          "filename": "register.js",
+          "lineno": 68,
           "columnno": 2,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {
@@ -1341,7 +1416,7 @@
           {
             "type": {
               "names": [
-                "Array",
+                "Array.<string>",
                 "string"
               ]
             },
@@ -1351,7 +1426,7 @@
           {
             "type": {
               "names": [
-                "any"
+                "string"
               ]
             },
             "description": "The command's name",
@@ -1360,19 +1435,21 @@
           {
             "type": {
               "names": [
-                "defaultCommandOptions"
+                "DefaultCommandOptions"
               ]
             },
-            "description": "An option object, that will be asigned with defaultCommandOptions",
+            "optional": true,
+            "defaultvalue": "{}",
+            "description": "An option object, that will be asigned with DefaultCommandOptions",
             "name": "options"
           },
           {
             "type": {
               "names": [
-                "function"
+                "FisherCallback"
               ]
             },
-            "description": "A fisherCallback",
+            "description": "A FisherCallback",
             "name": "callback"
           }
         ],
@@ -1387,7 +1464,7 @@
         "comment": "/**\r\n         * the prefix trigered\r\n         * @name FisherRegister#description\r\n         * @type {string}\r\n         * @default null\r\n         */",
         "meta": {
           "filename": "register.js",
-          "lineno": 19,
+          "lineno": 24,
           "columnno": 8,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {}
@@ -1410,7 +1487,7 @@
         "comment": "/**\r\n         * the prefix trigered\r\n         * @name FisherRegister#name\r\n         * @type {string}\r\n         * @default null\r\n         */",
         "meta": {
           "filename": "register.js",
-          "lineno": 26,
+          "lineno": 31,
           "columnno": 8,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {}
@@ -1430,14 +1507,92 @@
         "$longname": "FisherRegister#name"
       },
       {
-        "comment": "/**\r\n     * A text command that can be only executed in a guild\r\n     * @example textCommand(\"cat\", null, function(req,res) {});\r\n     * @param {string} name The command's name\r\n     * @param {defaultCommandOptions} options An option object, that will be asigned with defaultCommandOptions\r\n     * @param {function} callback A fisherCallback\r\n     */",
+        "comment": "/**\r\n   * A command, that can be resolved/rejected. It triggers fishercodes when it's resolved/rejected\r\n   * @example command([\"dm\", \"text\"], \"cat\", null, function(req, res, resolve, reject){});\r\n   * @param {(string[]|string)} scope The channel type, can be an array or a string\r\n   * @param {string} name The command's name\r\n   * @param {DefaultCommandOptions} [options={}] An option object, that will be asigned with DefaultCommandOptions\r\n   * @param {FisherPromiseCallback} callback A FisherPromiseCallback\r\n   * @memberof FisherRegister\r\n   */",
         "meta": {
           "range": [
-            1305,
-            1779
+            3554,
+            4143
           ],
           "filename": "register.js",
-          "lineno": 41,
+          "lineno": 89,
+          "columnno": 2,
+          "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
+          "code": {
+            "id": "astnode100001413",
+            "name": "FisherRegister#promiseCommand",
+            "type": "MethodDefinition",
+            "paramnames": [
+              "scope",
+              "name",
+              "options",
+              "callback"
+            ]
+          },
+          "vars": {
+            "": null
+          }
+        },
+        "description": "A command, that can be resolved/rejected. It triggers fishercodes when it's resolved/rejected",
+        "examples": [
+          "command([\"dm\", \"text\"], \"cat\", null, function(req, res, resolve, reject){});"
+        ],
+        "params": [
+          {
+            "type": {
+              "names": [
+                "Array.<string>",
+                "string"
+              ]
+            },
+            "description": "The channel type, can be an array or a string",
+            "name": "scope"
+          },
+          {
+            "type": {
+              "names": [
+                "string"
+              ]
+            },
+            "description": "The command's name",
+            "name": "name"
+          },
+          {
+            "type": {
+              "names": [
+                "DefaultCommandOptions"
+              ]
+            },
+            "optional": true,
+            "defaultvalue": "{}",
+            "description": "An option object, that will be asigned with DefaultCommandOptions",
+            "name": "options"
+          },
+          {
+            "type": {
+              "names": [
+                "FisherPromiseCallback"
+              ]
+            },
+            "description": "A FisherPromiseCallback",
+            "name": "callback"
+          }
+        ],
+        "memberof": "FisherRegister",
+        "name": "promiseCommand",
+        "longname": "FisherRegister#promiseCommand",
+        "kind": "function",
+        "scope": "instance",
+        "$longname": "FisherRegister#promiseCommand"
+      },
+      {
+        "comment": "/**\r\n     * A text command that can be only executed in a guild\r\n     * @example textCommand(\"cat\", null, function(req,res) {});\r\n     * @param {string} name The command's name\r\n     * @param {DefaultCommandOptions} [options={}] An option object, that will be asigned with defaultCommandOptions\r\n     * @param {FisherCallback} callback A FisherCallback\r\n     */",
+        "meta": {
+          "range": [
+            1464,
+            1938
+          ],
+          "filename": "register.js",
+          "lineno": 46,
           "columnno": 2,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {
@@ -1471,19 +1626,21 @@
           {
             "type": {
               "names": [
-                "defaultCommandOptions"
+                "DefaultCommandOptions"
               ]
             },
+            "optional": true,
+            "defaultvalue": "{}",
             "description": "An option object, that will be asigned with defaultCommandOptions",
             "name": "options"
           },
           {
             "type": {
               "names": [
-                "function"
+                "FisherCallback"
               ]
             },
-            "description": "A fisherCallback",
+            "description": "A FisherCallback",
             "name": "callback"
           }
         ],
@@ -1501,7 +1658,7 @@
     "meta": {
       "range": [
         437,
-        945
+        1093
       ],
       "filename": "register.js",
       "lineno": 15,
