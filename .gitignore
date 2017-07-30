@@ -1,3 +1,4 @@
 node_modules/
 /coreCommands.js
 /test.js
+npm-debug.log
