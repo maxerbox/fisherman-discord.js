@@ -4,7 +4,12 @@
             "fisherman": "./lib/**/*.js"
         },
         {
-            "guide": "./README.md"
+            "guide": "./README.md",
+            "tutorial": "./docs/tutorial.md"
+        },
+        {
+            "middleware_tutorial" : "./docs/middleware.md",
+            "middleware_list": "./docs/middlewareList.md"
         }
     ],
     "dest": "./docs",
@@ -46,7 +51,7 @@
                     ]
                 },
                 {
-                    "iconClass": "ico-book",
+                    "iconClass": "ico-terminal",
                     "label": "Middlewares",
                     "items": [
                         {
