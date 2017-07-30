@@ -1,0 +1,145 @@
+
+<html><head></head><body><h1 id="quick-tutorial">Quick tutorial</h1>
+<hr />
+<h2 id="installing-fisherman">Installing fisherman</h2>
+<p>First, install fisherman through npm:</p>
+<pre><code class="lang-terminal">npm install --save fisherman-discord.js
+</code></pre>
+<p>Then, you just have to require fisherman :</p>
+<pre><code class="lang-javascript">const fisherman = require("fisherman-discord.js")
+</code></pre>
+<h2 id="setting-up-the-fisherman-client-and-authentificating-it">Setting up the fisherman client and authentificating it</h2>
+<p>You have to first create a <strong>new fisherman instance</strong> and set up the <a href="options">options</a></p>
+<pre><code class="lang-javascript">var bot = new fisherman.Fisherman({prefixes: ["cat!"], ownerID: "7986546546547987", clientOptions: {messageCacheMaxSize: 2}}) //options are passed here, here the bot will
+//proceed all the messages starting the "cat". Also, the discord.js client will not cache more than 2 messages.
+
+//Then we can init the client &amp; the middlewares with the bot token
+bot.on("initialized", function() { // A list of events is available here https://maxerbox.github.io/fisherman-discord.js/?api=fisherman#Fisherman
+    console.log("Fisherman initialized")
+})
+bot.init("bot_token")
+</code></pre>
+<h2 id="setting-up-the-fisherman-client-with-an-already-authenficated-discord-js-instance">Setting up the fisherman client with an already authenficated discord.js instance</h2>
+<pre><code class="lang-javascript">var bot = fisherman.Fisherman.createFromClient(discodJSClient, {prefixes: ["cat!"], ownerID: "7986546546547987"})
+bot.init()
+</code></pre>
+<h2 id="creating-a-register">Creating a register</h2>
+<p>To create a register named "Register test", with the key value "registerTest" (this key is used in the register library, Ex: fisherman.registers.get("registerTest"))</p>
+<pre><code class="lang-javascript">var register = bot.createRegister('registerTest', 'Register test');
+</code></pre>
+<h2 id="adding-commands-to-fisherman">Adding commands to fisherman</h2>
+<p>To add commands to fisherman, you need to pass through a register:</p>
+<h3 id="adding-a-simple-textcommand">Adding a simple textCommand</h3>
+<p>A text command is a command that can be only trigerred in a guild, and only if the bot has the permission to write messages</p>
+<pre><code class="lang-javascript">register.textCommand('ping', {}, function (req, res) { //it will send ping, and then edit the message
+  var current = Date.now()
+  res.send('Pinging......').then((message) =&gt; {
+    message.edit((Date.now() - current) + 'ms')
+  })
+})
+</code></pre>
+<h3 id="adding-a-pm-guild-command">Adding a pm/guild command</h3>
+<pre><code class="lang-javascript">register.promiseCommand(['text', 'dm'], 'promise', {}, function (req, res) { //this comand can be trigerred in a guild or in pm to the bot
+  res.send('Hey mate')
+})
+</code></pre>
+<h3 id="adding-a-promise-command">Adding a promise command</h3>
+<p>A promise command is same as a normal command, but it has to be resolved/rejected
+When the command is resolved, it triggers a <strong>COMMAND_SUCESS</strong> <a href="https://maxerbox.github.io/fisherman-discord.js/?api=fisherman#FisherCode">FisherCode</a> or a <strong>COMMAND_FAILED</strong> if it's rejected</p>
+<pre><code class="lang-javascript">register.promiseCommand(['text'], 'promise', null, function (req, res, resolve, reject) { //this command can be trigerred in a guild, 
+  res.send('Resolving the promise command')
+  resolve()
+})
+</code></pre>
+<h3 id="adding-a-command-with-an-object-class">Adding a command with an object/class</h3>
+<pre><code class="lang-javascript">const Command = fisherMan.Command;
+class SimpleCommand extends Command {
+    constructor() {
+        super("SimpleCommand", register)
+    }
+    execute(req, res) {
+        res.send('Yeeeeeeeeeeeeeeeeeeeeeeeeeeeee')
+    }
+}
+register.addCommand(new SimpleCommand());
+
+var command = {
+    name: "object",
+    execute: (req, res) {
+        res.send('Yeeeeeeeeeeeeeeeeeeeeeeeeeeeee')
+    }
+}
+register.addCommand(command);
+</code></pre>
+<h2 id="command-options">Command options</h2>
+<p>The command options are available <a href="">here</a></p>
+<h3 id="aliases">Aliases</h3>
+<p>What is an aliase ? Aliase are used to trigger a same command but with a different name</p>
+<p>Example:</p>
+<pre><code class="lang-javascript">register.textCommand('1aliase', {aliases : "abc"}, function (req, res) {
+  res.send('Aliase found')
+})
+register.textCommand('2aliase', {aliases : ["abc", "def"]}, function (req, res) {
+  res.send('Aliase found')
+})
+</code></pre>
+<h3 id="regular-expressions">Regular expressions</h3>
+<p>Regular expressions are used to match with a command suffixe</p>
+<p>Example: matching a command with everything</p>
+<pre><code class="lang-javascript">register.textCommand('match', {regPattern : new RegExp(".*")}, function (req, res) {
+  res.send('command trigerred')
+})
+</code></pre>
+<p>Example: matching a command with a discord id</p>
+<pre><code class="lang-javascript">register.textCommand('match', {regPattern : new RegExp("(&lt;@[0-9]+&gt;|&lt;@![0-9]+&gt;)")}, function (req, res) {
+  res.send('command trigerred: ' + this.regPattern.exec(this.suffixe)[0])
+})
+</code></pre>
+<h3 id="pattern-callback">Pattern Callback</h3>
+<p>What is the "Pattern Callback" ? It's used as custom matching</p>
+<p>Example: Simple regular expression matching</p>
+<pre><code class="lang-javascript">//Creation of a class, extending pattern callback
+const PatternCallback = fisherman.PatternCallback;
+class CustomMatching extends PatternCallback {
+    constructor() {
+        this.regPattern = new RegExp("(&lt;@[0-9]+&gt;|&lt;@![0-9]+&gt;)");
+    }
+    test(suffixe, validate) {
+        validate(this.regPattern.test(suffixe))
+    }
+    exec(suffixe, validate) {
+        validate(this.regPattern.exec(suffixe))
+    }
+}
+register.textCommand('match', {patternCallback: new CustomMatching()}, function (req, res) {
+  res.send('command trigerred: ' + this.regPattern.exec(this.suffixe, function(result) {})
+})
+//with an object
+var objectMatching = {
+    test : (suffixe, validate) {
+        validate(true)
+    },
+    exec: function(suffixe, validate) {
+        validate(null);
+    }
+}
+register.textCommand('matchCats', {patternCallback: objectMatching}, function (req, res) {
+  res.send('command trigerred: ' + this.regPattern.exec(this.suffixe), function(){})
+})
+</code></pre>
+<p>Pattern Callback is useful for custom matching with middlewares/plugins</p>
+<h2 id="locales">Locales</h2>
+<p>The "locales" option is used by middlewares, to save data for them, see <a href="https://github.com/maxerbox/required-prefixe-fisherman">required-prefixe-fisherman</a> for an example</p>
+<h2 id="fisherman-options">Fisherman options</h2>
+<p>The fisherman options are available <a href="">here</a></p>
+<h2 id="add-middleware">Add middleware</h2>
+<pre><code class="lang-javascript">bot.use(middleware)
+</code></pre>
+<h2 id="handling-fishercodes">Handling FisherCodes</h2>
+<p>A list of Fisher codes is available <a href="https://maxerbox.github.io/fisherman-discord.js/?api=fisherman#FisherCode">here</a></p>
+<p>A switch statement can be useful on the variable code</p>
+<pre><code class="lang-javascript">bot.on('fisherCode', function (router, code, err) { 
+  router.response.send('fisherCode ' + code + '\nError message: ' + err.message)
+})
+</code></pre>
+</body></html>

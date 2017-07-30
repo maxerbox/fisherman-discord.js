@@ -1,0 +1,80 @@
+
+<html><head></head><body><h1 id="middleware-tutorial">Middleware tutorial</h1>
+<hr />
+<h2 id="creating-a-middleware">Creating a middleware</h2>
+<p>An example of is available <a href="https://github.com/maxerbox/required-prefixe-fisherman">here</a></p>
+<p>Example: This middleware (we can call this also a "plugin") append 3 commands to fisherman</p>
+<pre><code class="lang-javascript">const fisherman = require("fisherman-discord.js")
+const AbstractMiddleware = fisherman.Middleware;
+class coreCommands extends middlware {
+  setUp (client, next) {
+    this.client = client
+    var register = client.createRegister('core', 'core')
+    register.textCommand('help', null, function (req, res) {
+      var message = 'This command was instantied inside a middleware\n'
+      client.registers.forEach(function (register) {
+        message += '__' + register.name + '__:\n'
+        register.forEach(function (command) {
+          message += '`' + command.name + '` '
+        })
+        message += '\n'
+      })
+      res.send(message)
+    })
+    register.textCommand('block', null, function (req, res) {
+            // this will be blocked
+    })
+    register.textCommand('exception', null, function (req, res) {
+            // this will be blocked
+    })
+    next()
+  }
+  handle (req, res, next) {
+    console.log('handle')
+    if (req.isCommand &amp;&amp; req.command.name === 'block') {
+      res.send('Blocking the middleware chain without throwing a fisher code')
+      next(true)
+    }
+    if (req.isCommand &amp;&amp; req.command.name === 'exception') {
+      res.send('Creating an exception, so trigerring a fishercode')
+      next(new Error('Exception'))
+    }
+    req.test = true
+    next(null, req, res)
+  }
+}
+module.exports = coreCommands
+</code></pre>
+<h3 id="only-setup-function">Only setUp function</h3>
+<p>Can be useful if you want to manage only the client, and not handle the messages (it's faster)</p>
+<pre><code class="lang-javascript">const fisherman = require("fisherman-discord.js")
+const AbstractMiddleware = fisherman.Middleware;
+class coreCommands extends middlware {
+    constructor() {
+        super()
+        this.handle = undefined // set handle function as "undefined", so it will be not added to the handling stack
+    }
+  setUp (client, next) {
+    this.client = client
+    var register = client.createRegister('core', 'core')
+    register.textCommand('help', null, function (req, res) {
+      var message = 'This command was instantied inside a middleware\n'
+      client.registers.forEach(function (register) {
+        message += '__' + register.name + '__:\n'
+        register.forEach(function (command) {
+          message += '`' + command.name + '` '
+        })
+        message += '\n'
+      })
+      res.send(message)
+    })
+    next()
+  }
+module.exports = coreCommands
+</code></pre>
+<h2 id="appending-the-middleware">Appending the middleware</h2>
+<pre><code class="lang-javascript">bot.use(middleware) //var bot: the fisherman client
+</code></pre>
+<h2 id="submitting-a-middleware-to-the-list">Submitting a middleware to the list</h2>
+<h3 id="to-submit-a-middleware-go-on-the-fisherman-discord-server">To submit a middleware, go on the fisherman discord server</h3>
+</body></html>
