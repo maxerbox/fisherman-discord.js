@@ -8,7 +8,7 @@
     "app" : {
         "title":"Fisherman discord.js",
         "server": "static",
-        "base": "fisherman-discord.js/"
+        "base": "/fisherman-discord.js"
     },
     "template": {
         "options": {
