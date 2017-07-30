@@ -184,7 +184,7 @@ Pattern Callback is useful for custom matching with middlewares/plugins
 
 ## Locales
 
-The "locales" option is used by middlewares, to save data for them, see [required-prefixe-fisherman](https://github.com/maxerbox/required-prefixe-fisherman) for an example
+The "locales" option is used by middlewares to save data for them, see [required-prefixe-fisherman](https://github.com/maxerbox/required-prefixe-fisherman) for an example
 
 ## Fisherman options
 
