@@ -1,8 +1,18 @@
 
 <html><head></head><body><h1 id="middleware-tutorial">Middleware tutorial</h1>
 <hr />
+<h2 id="what-is-a-middleware-how-it-works-how-to-use-it">What is a middleware, how it works, how to use it</h2>
+<p>A middleware is used to add more features to fisherman.</p>
+<ul>
+<li><p>Fisherman is using fastfall to build the middleware chain. It means that each middleware is executed one after the other (same as <code>waterfall</code>). The chain order is determinated by the order which you append middlewares to fisherman with <code>use()</code></p>
+</li>
+<li><p>You can break the middleware chain with <code>next(true)</code></p>
+</li>
+<li><p>If you want to throw an error and then send a fishercode, use <code>next(err)</code></p>
+</li>
+</ul>
 <h2 id="creating-a-middleware">Creating a middleware</h2>
-<p>An example of is available <a href="https://github.com/maxerbox/required-prefixe-fisherman">here</a></p>
+<p>An example is available <a href="https://github.com/maxerbox/required-prefixe-fisherman">here</a></p>
 <p>Example: This middleware (we can call this also a "plugin") append 3 commands to fisherman</p>
 <pre><code class="lang-javascript">const fisherman = require("fisherman-discord.js")
 const AbstractMiddleware = fisherman.Middleware;

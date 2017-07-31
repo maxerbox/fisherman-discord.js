@@ -1,8 +1,18 @@
 # Middleware tutorial
 
+## What is a middleware, how it works, how to use it
+
+A middleware is used to add more features to fisherman.
+
+* Fisherman is using fastfall to build the middleware chain. It means that each middleware is executed one after the other (same as `waterfall`). The chain order is determinated by the order which you append middlewares to fisherman with `use()`
+
+* You can break the middleware chain with `next(true)`
+
+* If you want to throw an error and then send a fishercode, use `next(err)`
+
 ## Creating a middleware
 
-An example of is available [here](https://github.com/maxerbox/required-prefixe-fisherman)
+An example is available [here](https://github.com/maxerbox/required-prefixe-fisherman)
 
 Example: This middleware (we can call this also a "plugin") append 3 commands to fisherman
 
