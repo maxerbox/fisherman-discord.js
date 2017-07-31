@@ -4,7 +4,8 @@ A list of middleware approved :
 
 | Name | Description | Author | Link |
 | ---- | ------------ | ----- | ----- |
-|Required prefixe|  Used to execute a command, only if the prefixe match with the one you want for the command | maxerbox | [npm](https://github.com/maxerbox/required-prefixe-fisherman)
+| Required prefixe |  Used to execute a command, only if the prefixe match with the one you want for the command | maxerbox | [npm](https://www.npmjs.com/package/required-prefixe-fisherman) [github](https://github.com/maxerbox/required-prefixe-fisherman)
+| Command Caching | A command caching middleware, used to cache the result of a command | maxerbox | [npm](https://www.npmjs.com/package/command-caching-fisherman) [github](https://www.npmjs.com/package/command-caching-fisherman)
 
 ## Submitting a middleware
 

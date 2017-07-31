@@ -28,7 +28,7 @@
           "columnno": 2,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\structure",
           "code": {
-            "id": "astnode100001986",
+            "id": "astnode100001980",
             "name": "AbstractMiddleware#handle",
             "type": "MethodDefinition",
             "paramnames": [
@@ -90,7 +90,7 @@
           "columnno": 2,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\structure",
           "code": {
-            "id": "astnode100001980",
+            "id": "astnode100001974",
             "name": "AbstractMiddleware#setUp",
             "type": "MethodDefinition",
             "paramnames": [
@@ -143,7 +143,7 @@
         "columnno": 2,
         "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\structure",
         "code": {
-          "id": "astnode100001968",
+          "id": "astnode100001962",
           "name": "AbstractMiddleware",
           "type": "MethodDefinition",
           "paramnames": []
@@ -426,7 +426,7 @@
       "columnno": 2,
       "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\structure",
       "code": {
-        "id": "astnode100002004",
+        "id": "astnode100001998",
         "name": "Command",
         "type": "MethodDefinition",
         "paramnames": [
@@ -1014,15 +1014,15 @@
         "comment": "/**\r\n     * Create a new register to add commands\r\n     * @fires Fisherman#registerAdded\r\n     * @param {string} keyName The register key value, to set in the registers map\r\n     * @param {string} [registerName=null] The register's name\r\n     * @param {string} [registerDescription=null] The register's description\r\n     * @return {FisherRegister} Return a FisherRegister instance\r\n     * @memberof Fisherman\r\n     */",
         "meta": {
           "range": [
-            9629,
-            9966
+            9607,
+            9944
           ],
           "filename": "fisherman.js",
-          "lineno": 266,
+          "lineno": 265,
           "columnno": 2,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {
-            "id": "astnode100001071",
+            "id": "astnode100001065",
             "name": "Fisherman#createRegister",
             "type": "MethodDefinition",
             "paramnames": [
@@ -1152,7 +1152,7 @@
         "comment": "/**\r\n     *  Emitted when Fisherman and middlewares are initialized\r\n     * @event Fisherman#initialized\r\n     */",
         "meta": {
           "filename": "fisherman.js",
-          "lineno": 228,
+          "lineno": 227,
           "columnno": 4,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {}
@@ -1169,7 +1169,7 @@
         "comment": "/**\r\n     * Emitted when a new register is added\r\n     * @event Fisherman#registerAdded\r\n     */",
         "meta": {
           "filename": "fisherman.js",
-          "lineno": 267,
+          "lineno": 266,
           "columnno": 4,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {}
@@ -1186,15 +1186,15 @@
         "comment": "/**\r\n     * Initialize Fisherman and the middlewares\r\n     * @param {string} [token=null] The token to log in with, optional if the client is already connected\r\n     * @param {function} callback An optional callback to trigger when Fisherman is initialized\r\n     * @memberof Fisherman\r\n     * @fires Fisherman#initialized\r\n     */",
         "meta": {
           "range": [
-            8424,
-            8845
+            8402,
+            8823
           ],
           "filename": "fisherman.js",
-          "lineno": 227,
+          "lineno": 226,
           "columnno": 2,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {
-            "id": "astnode100000974",
+            "id": "astnode100000968",
             "name": "Fisherman#init",
             "type": "MethodDefinition",
             "paramnames": [
@@ -1348,15 +1348,15 @@
         "comment": "/**\r\n     *\r\n     * Add a middleware to Fisherman\r\n     * @param {(function|Object)} middleware The middleware function|class\r\n     * @return {Fisherman}\r\n     * @memberof Fisherman\r\n     */",
         "meta": {
           "range": [
-            10166,
-            10390
+            10144,
+            10368
           ],
           "filename": "fisherman.js",
-          "lineno": 282,
+          "lineno": 281,
           "columnno": 2,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {
-            "id": "astnode100001103",
+            "id": "astnode100001097",
             "name": "Fisherman#use",
             "type": "MethodDefinition",
             "paramnames": [
@@ -1642,7 +1642,7 @@
           "columnno": 2,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {
-            "id": "astnode100001519",
+            "id": "astnode100001513",
             "name": "FisherRegister#addCommand",
             "type": "MethodDefinition",
             "paramnames": [
@@ -1707,7 +1707,7 @@
           "columnno": 2,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {
-            "id": "astnode100001328",
+            "id": "astnode100001322",
             "name": "FisherRegister#command",
             "type": "MethodDefinition",
             "paramnames": [
@@ -1831,7 +1831,7 @@
           "columnno": 2,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {
-            "id": "astnode100001421",
+            "id": "astnode100001415",
             "name": "FisherRegister#promiseCommand",
             "type": "MethodDefinition",
             "paramnames": [
@@ -1909,7 +1909,7 @@
           "columnno": 2,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {
-            "id": "astnode100001249",
+            "id": "astnode100001243",
             "name": "FisherRegister#textCommand",
             "type": "MethodDefinition",
             "paramnames": [
@@ -1978,7 +1978,7 @@
       "columnno": 2,
       "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
       "code": {
-        "id": "astnode100001210",
+        "id": "astnode100001204",
         "name": "FisherRegister",
         "type": "MethodDefinition",
         "paramnames": [
@@ -2041,7 +2041,7 @@
       "columnno": 2,
       "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\router",
       "code": {
-        "id": "astnode100001752",
+        "id": "astnode100001746",
         "name": "FisherRequest",
         "type": "MethodDefinition",
         "paramnames": [
@@ -2244,7 +2244,7 @@
       "columnno": 2,
       "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\router",
       "code": {
-        "id": "astnode100001814",
+        "id": "astnode100001808",
         "name": "FisherResponse",
         "type": "MethodDefinition",
         "paramnames": [
@@ -2294,7 +2294,7 @@
       "columnno": 2,
       "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\router",
       "code": {
-        "id": "astnode100001853",
+        "id": "astnode100001847",
         "name": "FisherResponse#send",
         "type": "MethodDefinition",
         "paramnames": [
@@ -2358,7 +2358,7 @@
       "columnno": 2,
       "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\router",
       "code": {
-        "id": "astnode100001832",
+        "id": "astnode100001826",
         "name": "FisherResponse#sendCode",
         "type": "MethodDefinition",
         "paramnames": [
@@ -2416,7 +2416,7 @@
       "columnno": 2,
       "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\router",
       "code": {
-        "id": "astnode100001925",
+        "id": "astnode100001919",
         "name": "FisherRouter.buildFromMessage",
         "type": "MethodDefinition",
         "paramnames": [
@@ -2477,7 +2477,7 @@
       "columnno": 2,
       "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\router",
       "code": {
-        "id": "astnode100001897",
+        "id": "astnode100001891",
         "name": "FisherRouter",
         "type": "MethodDefinition",
         "paramnames": [
@@ -2982,7 +2982,7 @@
           "columnno": 2,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\structure",
           "code": {
-            "id": "astnode100002111",
+            "id": "astnode100002105",
             "name": "PatternCallback#exec",
             "type": "MethodDefinition",
             "paramnames": [
@@ -3037,7 +3037,7 @@
           "columnno": 2,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\structure",
           "code": {
-            "id": "astnode100002105",
+            "id": "astnode100002099",
             "name": "PatternCallback#test",
             "type": "MethodDefinition",
             "paramnames": [
@@ -3094,7 +3094,7 @@
       "columnno": 2,
       "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\structure",
       "code": {
-        "id": "astnode100002093",
+        "id": "astnode100002087",
         "name": "PatternCallback",
         "type": "MethodDefinition",
         "paramnames": []
