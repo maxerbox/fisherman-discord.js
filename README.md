@@ -8,7 +8,7 @@
 
 <h3 align="center"><img width="100" src="https://avatars3.githubusercontent.com/u/29208316?v=4&s=400" alt="standard-js"><br><br></h3>
 
- > *a lightweight, fast, and powerful discord command router* writed in javascript standard style and inspired by expressjs
+ > *a lightweight, fast, and powerful discord command router* written in javascript standard style and inspired by expressjs
 
 ```javascript
 var bot = new fisherMan.Fisherman({ prefixes: ['fish!'] }) // creating a client, with the prefixe "fish!"
