@@ -1,6 +1,6 @@
 {
   "name": "fisherman-discord.js",
-  "version": "1.0.0e",
+  "version": "1.0.0f",
   "description": "Fisherman: A Discord command router, inspired by expressjs | Discord.js library base",
   "main": "./index.js",
   "scripts": {

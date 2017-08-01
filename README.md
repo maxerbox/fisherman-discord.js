@@ -33,6 +33,8 @@ bot.on('fisherCode', function (router, code, err) { //displaying the fishercodes
 
 ## Documentation
 
+[Discord server](https://discord.gg/pXH252u)
+
 [Quick tutorial](https://maxerbox.github.io/fisherman-discord.js/?content=tutorial)
 
 [Documentation link](https://maxerbox.github.io/fisherman-discord.js/)
