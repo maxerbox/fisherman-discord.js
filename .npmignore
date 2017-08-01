@@ -1,0 +1,7 @@
+docs/
+.vscode/
+.eslintrc.json
+node_modules/
+/coreCommands.js
+/test.js
+npm-debug.log

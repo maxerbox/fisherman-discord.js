@@ -6,6 +6,7 @@ A list of middleware approved :
 | ---- | ------------ | ----- | ----- |
 | Required prefixe |  Used to execute a command, only if the prefixe match with the one you want for the command | maxerbox | [npm](https://www.npmjs.com/package/required-prefixe-fisherman) [github](https://github.com/maxerbox/required-prefixe-fisherman)
 | Command Caching | A command caching middleware, used to cache the result of a command | maxerbox | [npm](https://www.npmjs.com/package/command-caching-fisherman) [github](https://www.npmjs.com/package/command-caching-fisherman)
+| Parallel Handler | Execute the middlewares in parallel, not in chain | maxerbox | [npm](https://www.npmjs.com/package/parallel-handle-fisherman) [github](https://www.npmjs.com/package/parallel-handle-fisherman)
 
 ## Submitting a middleware
 
