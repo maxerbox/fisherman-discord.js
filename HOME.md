@@ -4,7 +4,7 @@
 
 ## What is Fisherman
 
- > *a lightweight, fast, and powerful discord command router* writed in javascript standard style and inspired by expressjs
+ > *a lightweight, fast, and powerful discord command router* written in javascript standard style and inspired by expressjs
 
 ```javascript
 var bot = new fisherMan.Fisherman({ prefixes: ['fish!'] }) // creating a client, with the prefixe "fish!"

@@ -29,7 +29,7 @@
             },
             {
                 "property": "og:description",
-                "content": "A lightweight, fast, and powerful discord command router writed in javascript standard style and inspired by expressjs"
+                "content": "A lightweight, fast, and powerful discord command router written in javascript standard style and inspired by expressjs"
             },
             {
                 "property": "og:image",
