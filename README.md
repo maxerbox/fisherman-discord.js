@@ -5,6 +5,7 @@
 <img src="https://img.shields.io/npm/v/fisherman-discord.js.svg">
 <img src="https://img.shields.io/github/license/maxerbox/fisherman-discord.js.svg">
 <img src="https://img.shields.io/david/maxerbox/fisherman-discord.js.svg">
+<img src ="https://travis-ci.org/maxerbox/fisherman-discord.js.svg?branch=master">
 </div>
 
 # Fisherman - Discord.js
