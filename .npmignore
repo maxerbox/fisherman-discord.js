@@ -10,3 +10,5 @@ middlewareLIST.md
 logo.png
 TUTORIAL.md
 docma.config.json
+test/
+.travis.yml
