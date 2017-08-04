@@ -1,6 +1,15 @@
 const fisherMan = require('../')
 const Test = require('./middlewareTest')
-const {token} = require('./auth.json')
+var token
+var tts = 10000
+try {
+  token = require('./auth.json').token
+  tts = require('./auth.json').tts
+} catch (e) {
+  token = process.env.TOKEN
+  tts = process.env.TTS || 10000
+}
+console.log(token)
 var middleware = new Test()
 var bot = new fisherMan.Fisherman({ prefixes: ['fish!'] })
 bot.use(middleware)
@@ -42,3 +51,7 @@ register.textCommand('match', {regPattern: new RegExp('(<@[0-9]+>|<@![0-9]+>)')}
   res.send('command trigerred: ' + this.regPattern.exec(this.suffixe)[0])
 })
 console.log(register.size)
+
+setTimeout(function () {
+  process.exit(0)
+}, tts)

@@ -4,8 +4,9 @@
   "description": "Fisherman: A Discord command router, inspired by expressjs | Discord.js library base",
   "main": "./index.js",
   "scripts": {
-    "test": "npm run lint",
-    "lint": "eslint lib"
+    "test": "npm run lint && npm run quickTest",
+    "lint": "eslint lib",
+    "quickTest" : "node ./test/test.js"
   },
   "author": "Simon Sassi",
   "license": "ISC",
