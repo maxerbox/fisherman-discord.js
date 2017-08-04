@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "6"
 before_install:
-  - npm i eslint@latest
+  - npm i -g eslint@latest
 cache:
   directories:
     - "node_modules"
