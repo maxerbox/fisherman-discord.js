@@ -1,6 +1,17 @@
 <h1 align="center"><br><br><img width="500" src="https://cdn.rawgit.com/maxerbox/fisherman-discord.js/dfc8afbe/logo.png" alt="fisherman"><br><br><br></h1>
+<div align="center">
+<img src="https://img.shields.io/scrutinizer/g/maxerbox/fisherman-discord.js.svg">
+<img src="https://img.shields.io/npm/dt/fisherman-discord.js.svg">
+<img src="https://img.shields.io/npm/v/fisherman-discord.js.svg">
+<img src="https://img.shields.io/github/license/maxerbox/fisherman-discord.js.svg">
+<img src="https://img.shields.io/david/maxerbox/fisherman-discord.js.svg">
+</div>
 
 # Fisherman - Discord.js
+
+```terminal
+npm install --save fisherman-discord.js
+```
 
 > Copyright © 2017, Simon Sassi
 
