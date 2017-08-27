@@ -1,11 +1,12 @@
 <h1 align="center"><br><br><img width="500" src="https://cdn.rawgit.com/maxerbox/fisherman-discord.js/dfc8afbe/logo.png" alt="fisherman"><br><br><br></h1>
 <div align="center">
-<img src="https://img.shields.io/scrutinizer/g/maxerbox/fisherman-discord.js.svg">
-<img src="https://img.shields.io/npm/dt/fisherman-discord.js.svg">
-<img src="https://img.shields.io/npm/v/fisherman-discord.js.svg">
+<a href="https://scrutinizer-ci.com/g/maxerbox/fisherman-discord.js/"><img src="https://img.shields.io/scrutinizer/g/maxerbox/fisherman-discord.js.svg"></a>
+<a href="https://www.npmjs.com/package/fisherman-discord.js"><img src="https://img.shields.io/npm/dt/fisherman-discord.js.svg"></a>
+<a href="https://www.npmjs.com/package/fisherman-discord.js"><img src="https://img.shields.io/npm/v/fisherman-discord.js.svg"></a>
 <img src="https://img.shields.io/github/license/maxerbox/fisherman-discord.js.svg">
 <img src="https://img.shields.io/david/maxerbox/fisherman-discord.js.svg">
-<img src ="https://travis-ci.org/maxerbox/fisherman-discord.js.svg?branch=master">
+<a href="https://travis-ci.org/maxerbox/fisherman-discord.js"><img src ="https://travis-ci.org/maxerbox/fisherman-discord.js.svg?branch=master"></a>
+<a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="javascript style guide"></a>
 </div>
 
 # Fisherman - Discord.js
