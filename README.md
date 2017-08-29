@@ -41,8 +41,6 @@ __Fisherman features__ :
 
 * Promised commands, custom pattern matching with patternCallback option etc...
 
-* Request/response prototype can be edited
-
 ```javascript
 var bot = new fisherMan.Fisherman({ prefixes: ['fish!'] }) // creating a client, with the prefixe "fish!"
 bot.use(middleware) // appending a middleware/plugin to fisherman
