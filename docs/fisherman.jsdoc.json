@@ -28,7 +28,7 @@
           "columnno": 2,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\structure",
           "code": {
-            "id": "astnode100001980",
+            "id": "astnode100001996",
             "name": "AbstractMiddleware#handle",
             "type": "MethodDefinition",
             "paramnames": [
@@ -90,7 +90,7 @@
           "columnno": 2,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\structure",
           "code": {
-            "id": "astnode100001974",
+            "id": "astnode100001990",
             "name": "AbstractMiddleware#setUp",
             "type": "MethodDefinition",
             "paramnames": [
@@ -143,7 +143,7 @@
         "columnno": 2,
         "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\structure",
         "code": {
-          "id": "astnode100001962",
+          "id": "astnode100001978",
           "name": "AbstractMiddleware",
           "type": "MethodDefinition",
           "paramnames": []
@@ -426,7 +426,7 @@
       "columnno": 2,
       "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\structure",
       "code": {
-        "id": "astnode100001998",
+        "id": "astnode100002014",
         "name": "Command",
         "type": "MethodDefinition",
         "paramnames": [
@@ -539,11 +539,11 @@
     ]
   },
   {
-    "comment": "/**\r\n     * Creates an instance of CommandNotFoundException.\r\n     * @param {string} [command=null] the command\r\n     * @memberof CommandNotFoundException\r\n     */",
+    "comment": "/**\r\n     * Creates an instance of CommandNotFoundException.\r\n     * @param {string} command the command\r\n     * @memberof CommandNotFoundException\r\n     */",
     "meta": {
       "range": [
-        318,
-        819
+        311,
+        805
       ],
       "filename": "CommandNotFoundException.js",
       "lineno": 12,
@@ -569,8 +569,6 @@
             "string"
           ]
         },
-        "optional": true,
-        "defaultvalue": null,
         "description": "the command",
         "name": "command"
       }
@@ -918,11 +916,11 @@
         "comment": "/**\r\n     * Create a Fisherman instance from an already logged in discord.js client\r\n     *\r\n     * @static\r\n     * @param {Client} client The discord.js client\r\n     * @param {FishermanOptions} fisherOptions The options for Fisherman\r\n     * @memberof Fisherman\r\n     */",
         "meta": {
           "range": [
-            3769,
-            3920
+            4012,
+            4163
           ],
           "filename": "fisherman.js",
-          "lineno": 108,
+          "lineno": 114,
           "columnno": 2,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {
@@ -967,10 +965,32 @@
         "$longname": "Fisherman.createFromClient"
       },
       {
+        "comment": "/**\r\n         * The FisherRouter prototye that is used to instantiate the router when handling the message\r\n         * @name Fisherman#_fisherRouter\r\n         * @type {FisherRouter}\r\n         */",
+        "meta": {
+          "filename": "fisherman.js",
+          "lineno": 27,
+          "columnno": 8,
+          "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
+          "code": {}
+        },
+        "description": "The FisherRouter prototye that is used to instantiate the router when handling the message",
+        "name": "_fisherRouter",
+        "type": {
+          "names": [
+            "FisherRouter"
+          ]
+        },
+        "memberof": "Fisherman",
+        "longname": "Fisherman#_fisherRouter",
+        "scope": "instance",
+        "kind": "member",
+        "$longname": "Fisherman#_fisherRouter"
+      },
+      {
         "comment": "/**\r\n         * All the command aliases handled by fisherman\r\n         * @name Fisherman#aliases\r\n         * @type {Map.<string, Command>}\r\n         */",
         "meta": {
           "filename": "fisherman.js",
-          "lineno": 47,
+          "lineno": 53,
           "columnno": 8,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {}
@@ -992,7 +1012,7 @@
         "comment": "/**\r\n         * All the commands handled by fisherman\r\n         * @name Fisherman#commands\r\n         * @type {Map.<string, Command>}\r\n         */",
         "meta": {
           "filename": "fisherman.js",
-          "lineno": 41,
+          "lineno": 47,
           "columnno": 8,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {}
@@ -1011,14 +1031,14 @@
         "$longname": "Fisherman#commands"
       },
       {
-        "comment": "/**\r\n     * Create a new register to add commands\r\n     * @fires Fisherman#registerAdded\r\n     * @param {string} keyName The register key value, to set in the registers map\r\n     * @param {string} [registerName=null] The register's name\r\n     * @param {string} [registerDescription=null] The register's description\r\n     * @return {FisherRegister} Return a FisherRegister instance\r\n     * @memberof Fisherman\r\n     */",
+        "comment": "/**\r\n     * Create a new register to add commands\r\n     * @fires Fisherman#registerAdded\r\n     * @param {string} keyName The register key value, to set in the registers map\r\n     * @param {string} [registerName = null] The register's name\r\n     * @param {string} [registerDescription = null] The register's description\r\n     * @return {FisherRegister} Return a FisherRegister instance\r\n     * @memberof Fisherman\r\n     */",
         "meta": {
           "range": [
-            9607,
-            9944
+            9856,
+            10193
           ],
           "filename": "fisherman.js",
-          "lineno": 265,
+          "lineno": 271,
           "columnno": 2,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {
@@ -1152,7 +1172,7 @@
         "comment": "/**\r\n     *  Emitted when Fisherman and middlewares are initialized\r\n     * @event Fisherman#initialized\r\n     */",
         "meta": {
           "filename": "fisherman.js",
-          "lineno": 227,
+          "lineno": 233,
           "columnno": 4,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {}
@@ -1169,7 +1189,7 @@
         "comment": "/**\r\n     * Emitted when a new register is added\r\n     * @event Fisherman#registerAdded\r\n     */",
         "meta": {
           "filename": "fisherman.js",
-          "lineno": 266,
+          "lineno": 272,
           "columnno": 4,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {}
@@ -1183,14 +1203,14 @@
         "$longname": "Fisherman#event:registerAdded"
       },
       {
-        "comment": "/**\r\n     * Initialize Fisherman and the middlewares\r\n     * @param {string} [token=null] The token to log in with, optional if the client is already connected\r\n     * @param {function} callback An optional callback to trigger when Fisherman is initialized\r\n     * @memberof Fisherman\r\n     * @fires Fisherman#initialized\r\n     */",
+        "comment": "/**\r\n     * Initialize Fisherman and the middlewares\r\n     * @param {string} [token = null] The token to log in with, optional if the client is already connected\r\n     * @param {function} callback An optional callback to trigger when Fisherman is initialized\r\n     * @memberof Fisherman\r\n     * @fires Fisherman#initialized\r\n     */",
         "meta": {
           "range": [
-            8402,
-            8823
+            8647,
+            9068
           ],
           "filename": "fisherman.js",
-          "lineno": 226,
+          "lineno": 232,
           "columnno": 2,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {
@@ -1243,7 +1263,7 @@
         "comment": "/**\r\n         * All the command registers handled by fisherman\r\n         * @name Fisherman#registers\r\n         * @type {Map.<string, FisherRegister>}\r\n         */",
         "meta": {
           "filename": "fisherman.js",
-          "lineno": 53,
+          "lineno": 59,
           "columnno": 8,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {}
@@ -1265,11 +1285,11 @@
         "comment": "/**\r\n     * Set the options to fisherman\r\n     *\r\n     * @param {FishermanOptions} options\r\n     * @memberof Fisherman\r\n     */",
         "meta": {
           "range": [
-            2517,
-            3026
+            2760,
+            3269
           ],
           "filename": "fisherman.js",
-          "lineno": 74,
+          "lineno": 80,
           "columnno": 2,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {
@@ -1306,11 +1326,11 @@
         "comment": "/**\r\n     *\r\n     * Set the prefixe\r\n     * @param {(Array|string)} prefixes\r\n     * @memberof Fisherman\r\n     */",
         "meta": {
           "range": [
-            3151,
-            3488
+            3394,
+            3731
           ],
           "filename": "fisherman.js",
-          "lineno": 92,
+          "lineno": 98,
           "columnno": 2,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {
@@ -1348,11 +1368,11 @@
         "comment": "/**\r\n     *\r\n     * Add a middleware to Fisherman\r\n     * @param {(function|Object)} middleware The middleware function|class\r\n     * @return {Fisherman}\r\n     * @memberof Fisherman\r\n     */",
         "meta": {
           "range": [
-            10144,
-            10368
+            10393,
+            10617
           ],
           "filename": "fisherman.js",
-          "lineno": 281,
+          "lineno": 287,
           "columnno": 2,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {
@@ -1403,14 +1423,14 @@
     "meta": {
       "range": [
         1041,
-        2380
+        2623
       ],
       "filename": "fisherman.js",
       "lineno": 25,
       "columnno": 2,
       "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
       "code": {
-        "id": "astnode100000220",
+        "id": "astnode100000214",
         "name": "Fisherman",
         "type": "MethodDefinition",
         "paramnames": [
@@ -1634,8 +1654,8 @@
         "comment": "/**\r\n     * Add a command to fisherman, through an object or an command class extending the abstract class \"Command\"\r\n     * @param {(Object|Command)} command An object, or a class extending the abstract class \"Command\"\r\n     * @memberof FisherRegister\r\n     */",
         "meta": {
           "range": [
-            4533,
-            4669
+            4544,
+            4676
           ],
           "filename": "register.js",
           "lineno": 107,
@@ -1696,11 +1716,11 @@
         "$longname": "FisherRegister#client"
       },
       {
-        "comment": "/**\r\n     * A command, specified by the name and the scope.\r\n     * @example command([\"dm\", \"text\"], \"cat\", null, function(req, res){});\r\n     * @param {(string[]|string)} scope The channel type, can be an array or a string\r\n     * @param {string} name The command's name\r\n     * @param {DefaultCommandOptions} [options={}] An option object, that will be asigned with DefaultCommandOptions\r\n     * @param {FisherCallback} callback A FisherCallback\r\n     * @memberof FisherRegister\r\n     */",
+        "comment": "/**\r\n     * A command, specified by the name and the scope.\r\n     * @example command([\"dm\", \"text\"], \"cat\", null, function(req, res){});\r\n     * @param {(string[]|string)} scope The channel type, can be an array or a string\r\n     * @param {string} name The command's name\r\n     * @param {DefaultCommandOptions} [options = {}] An option object, that will be asigned with DefaultCommandOptions\r\n     * @param {FisherCallback} callback A FisherCallback\r\n     * @memberof FisherRegister\r\n     */",
         "meta": {
           "range": [
-            2556,
-            3115
+            2565,
+            3124
           ],
           "filename": "register.js",
           "lineno": 69,
@@ -1820,11 +1840,11 @@
         "$longname": "FisherRegister#name"
       },
       {
-        "comment": "/**\r\n   * A command, that can be resolved/rejected. It triggers fishercodes when it's resolved/rejected\r\n   * @example command([\"dm\", \"text\"], \"cat\", null, function(req, res, resolve, reject){});\r\n   * @param {(string[]|string)} scope The channel type, can be an array or a string\r\n   * @param {string} name The command's name\r\n   * @param {DefaultCommandOptions} [options={}] An option object, that will be asigned with DefaultCommandOptions\r\n   * @param {FisherPromiseCallback} callback A FisherPromiseCallback\r\n   * @memberof FisherRegister\r\n   */",
+        "comment": "/**\r\n   * A command, that can be resolved/rejected. It triggers fishercodes when it's resolved/rejected\r\n   * @example command([\"dm\", \"text\"], \"cat\", null, function(req, res, resolve, reject){});\r\n   * @param {(string[]|string)} scope The channel type, can be an array or a string\r\n   * @param {string} name The command's name\r\n   * @param {DefaultCommandOptions} [options = {}] An option object, that will be asigned with DefaultCommandOptions\r\n   * @param {FisherPromiseCallback} callback A FisherPromiseCallback\r\n   * @memberof FisherRegister\r\n   */",
         "meta": {
           "range": [
-            3673,
-            4262
+            3684,
+            4273
           ],
           "filename": "register.js",
           "lineno": 90,
@@ -1898,11 +1918,11 @@
         "$longname": "FisherRegister#promiseCommand"
       },
       {
-        "comment": "/**\r\n     * A text command that can be only executed in a guild\r\n     * @example textCommand(\"cat\", null, function(req,res) {});\r\n     * @param {string} name The command's name\r\n     * @param {DefaultCommandOptions} [options={}] An option object, that will be asigned with defaultCommandOptions\r\n     * @param {FisherCallback} callback A FisherCallback\r\n     */",
+        "comment": "/**\r\n     * A text command that can be only executed in a guild\r\n     * @example textCommand(\"cat\", null, function(req,res) {});\r\n     * @param {string} name The command's name\r\n     * @param {DefaultCommandOptions} [options = {} ] An option object, that will be asigned with defaultCommandOptions\r\n     * @param {FisherCallback} callback A FisherCallback\r\n     */",
         "meta": {
           "range": [
-            1583,
-            2057
+            1590,
+            2064
           ],
           "filename": "register.js",
           "lineno": 47,
@@ -1967,11 +1987,11 @@
     ]
   },
   {
-    "comment": "/**\r\n     * Creates an instance of FisherRegister.\r\n     * @param {Fisherman} client\r\n     * @param {string} [name=null]\r\n     * @param {string} [desc=null]\r\n     * @memberof FisherRegister\r\n     */",
+    "comment": "/**\r\n     * Creates an instance of FisherRegister.\r\n     * @param {Fisherman} client\r\n     * @param {string} [name = null]\r\n     * @param {string} [desc = null]\r\n     * @memberof FisherRegister\r\n     */",
     "meta": {
       "range": [
-        491,
-        1212
+        495,
+        1216
       ],
       "filename": "register.js",
       "lineno": 16,
@@ -2283,11 +2303,11 @@
     "$longname": "FisherResponse.FisherResponse"
   },
   {
-    "comment": "/**\r\n     *\r\n     * Same as channel.send()\r\n     * @see https://discord.js.org/#/docs/main/stable/class/TextChannel?scrollTo=send\r\n     * @param {string} text\r\n     * @param {Object} [data={}]\r\n     * @returns {Promise<Message|Message[]>}\r\n     * @memberof FisherResponse\r\n     */",
+    "comment": "/**\r\n     *\r\n     * Same as channel.send()\r\n     * @see https://discord.js.org/#/docs/main/stable/class/TextChannel?scrollTo=send\r\n     * @param {string} text\r\n     * @param {Object} [data = {}]\r\n     * @returns {Promise<Message|Message[]>}\r\n     * @memberof FisherResponse\r\n     */",
     "meta": {
       "range": [
-        1310,
-        1396
+        1314,
+        1400
       ],
       "filename": "response.js",
       "lineno": 52,
@@ -2347,11 +2367,11 @@
     "$longname": "FisherResponse#send"
   },
   {
-    "comment": "/**\r\n     *\r\n     * Emit a \"fisherCode\" event\r\n     * @param {(number|FisherCode)} code The code to send\r\n     * @param {Error} [err=null] An error to pass\r\n     * @fires Fisherman#fisherCode\r\n     * @memberof FisherResponse\r\n     */",
+    "comment": "/**\r\n     *\r\n     * Emit a \"fisherCode\" event\r\n     * @param {(number|FisherCode)} code The code to send\r\n     * @param {Error} [err = null] An error to pass\r\n     * @fires Fisherman#fisherCode\r\n     * @memberof FisherResponse\r\n     */",
     "meta": {
       "range": [
-        726,
-        1018
+        728,
+        1020
       ],
       "filename": "response.js",
       "lineno": 33,
@@ -2408,8 +2428,8 @@
     "comment": "/**\r\n     * Build a router from a discord.js message\r\n     *\r\n     * @static\r\n     * @param {Fisherman} client The fisherman instance\r\n     * @param {Message} message Discord.js message\r\n     * @return {FisherRouter}\r\n     * @memberof FisherRouter\r\n     */",
     "meta": {
       "range": [
-        1118,
-        1304
+        1114,
+        1300
       ],
       "filename": "router.js",
       "lineno": 43,
@@ -2469,8 +2489,8 @@
     "comment": "/**\r\n     * Creates an instance of FisherRouter.\r\n     * @param {Fisherman} client\r\n     * @memberof FisherRouter\r\n     */",
     "meta": {
       "range": [
-        284,
-        852
+        280,
+        848
       ],
       "filename": "router.js",
       "lineno": 14,
@@ -2505,6 +2525,50 @@
     "kind": "class",
     "scope": "static",
     "$longname": "FisherRouter.FisherRouter"
+  },
+  {
+    "comment": "/**\r\n * the FisherRequest prototype, used instantiate the request\r\n * @name FisherRouter#_fisherRequest\r\n * @type {FisherRequest}\r\n */",
+    "meta": {
+      "filename": "router.js",
+      "lineno": 50,
+      "columnno": 0,
+      "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\router",
+      "code": {}
+    },
+    "description": "the FisherRequest prototype, used instantiate the request",
+    "name": "_fisherRequest",
+    "type": {
+      "names": [
+        "FisherRequest"
+      ]
+    },
+    "memberof": "FisherRouter",
+    "longname": "FisherRouter#_fisherRequest",
+    "scope": "instance",
+    "kind": "member",
+    "$longname": "FisherRouter#_fisherRequest"
+  },
+  {
+    "comment": "/**\r\n * the FisherResponse prototype, used instantiate the response\r\n * @name FisherRouter#_fisherResponse\r\n * @type {FisherResponse}\r\n */",
+    "meta": {
+      "filename": "router.js",
+      "lineno": 56,
+      "columnno": 0,
+      "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\router",
+      "code": {}
+    },
+    "description": "the FisherResponse prototype, used instantiate the response",
+    "name": "_fisherResponse",
+    "type": {
+      "names": [
+        "FisherResponse"
+      ]
+    },
+    "memberof": "FisherRouter",
+    "longname": "FisherRouter#_fisherResponse",
+    "scope": "instance",
+    "kind": "member",
+    "$longname": "FisherRouter#_fisherResponse"
   },
   {
     "comment": "/**\r\n         * The fisherman client that instantied the router\r\n         * @name FisherRouter#client\r\n         * @type {Fisherman}\r\n         */",
@@ -2641,18 +2705,18 @@
     ]
   },
   {
-    "comment": "/**\r\n     * Creates an instance of InvalidChannelException.\r\n     * @param {string} [channel=null] The channel type. See https://discord.js.org/#/docs/main/stable/class/Channel?scrollTo=type\r\n     * @memberof InvalidChannelException\r\n     */",
+    "comment": "/**\r\n     * Creates an instance of InvalidChannelException.\r\n     * @param {string} channel The channel type. See https://discord.js.org/#/docs/main/stable/class/Channel?scrollTo=type\r\n     * @memberof InvalidChannelException\r\n     */",
     "meta": {
       "range": [
-        431,
-        960
+        424,
+        946
       ],
       "filename": "InvalidChannelException.js",
       "lineno": 13,
       "columnno": 2,
       "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\exceptions",
       "code": {
-        "id": "astnode100000043",
+        "id": "astnode100000041",
         "name": "InvalidChannelException",
         "type": "MethodDefinition",
         "paramnames": [
@@ -2671,8 +2735,6 @@
             "string"
           ]
         },
-        "optional": true,
-        "defaultvalue": null,
         "description": "The channel type. See https://discord.js.org/#/docs/main/stable/class/Channel?scrollTo=type",
         "name": "channel"
       }
@@ -2764,7 +2826,7 @@
       "columnno": 2,
       "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\exceptions",
       "code": {
-        "id": "astnode100000080",
+        "id": "astnode100000076",
         "name": "InvalidPatternException",
         "type": "MethodDefinition",
         "paramnames": [
@@ -2865,18 +2927,18 @@
     ]
   },
   {
-    "comment": "/**\r\n     * Creates an instance of MissingPermissionsException.\r\n     * @param {(Array<string>|string)} [missing=null] the missing perms\r\n     * @memberof MissingPermissionsException\r\n     */",
+    "comment": "/**\r\n     * Creates an instance of MissingPermissionsException.\r\n     * @param {(Array<string>|string)} missing the missing perms\r\n     * @memberof MissingPermissionsException\r\n     */",
     "meta": {
       "range": [
-        413,
-        970
+        406,
+        956
       ],
       "filename": "MissingPermissionsException.js",
       "lineno": 13,
       "columnno": 2,
       "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\exceptions",
       "code": {
-        "id": "astnode100000117",
+        "id": "astnode100000113",
         "name": "MissingPermissionsException",
         "type": "MethodDefinition",
         "paramnames": [
@@ -2896,8 +2958,6 @@
             "string"
           ]
         },
-        "optional": true,
-        "defaultvalue": null,
         "description": "the missing perms",
         "name": "missing"
       }
@@ -2921,6 +2981,10 @@
       "lodash": "^4.17.4"
     },
     "description": "Fisherman: A Discord command router, inspired by expressjs | Discord.js library base",
+    "devDependencies": {
+      "standard": "latest",
+      "eslint": "latest"
+    },
     "files": [
       "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\exceptions\\CommandNotFoundException.js",
       "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\exceptions\\InvalidChannelException.js",
@@ -2950,7 +3014,7 @@
       "type": "git",
       "url": "https://github.com/maxerbox/fisherman-discord.js.git"
     },
-    "version": "1.0.0g",
+    "version": "1.0.0j",
     "$longname": "package:fisherman-discord.js"
   },
   {
@@ -2982,7 +3046,7 @@
           "columnno": 2,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\structure",
           "code": {
-            "id": "astnode100002105",
+            "id": "astnode100002121",
             "name": "PatternCallback#exec",
             "type": "MethodDefinition",
             "paramnames": [
@@ -3037,7 +3101,7 @@
           "columnno": 2,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\structure",
           "code": {
-            "id": "astnode100002099",
+            "id": "astnode100002115",
             "name": "PatternCallback#test",
             "type": "MethodDefinition",
             "paramnames": [
@@ -3094,7 +3158,7 @@
       "columnno": 2,
       "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\structure",
       "code": {
-        "id": "astnode100002087",
+        "id": "astnode100002103",
         "name": "PatternCallback",
         "type": "MethodDefinition",
         "paramnames": []

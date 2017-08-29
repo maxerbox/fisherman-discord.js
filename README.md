@@ -23,6 +23,26 @@ npm install --save fisherman-discord.js
 
  > *a lightweight, fast, and powerful discord command router* written in javascript standard style and inspired by expressjs
 
+__Fisherman features__ :
+
+* Use native RegExp to match with the prefixe(s)
+
+* Powerful middleware/plugin chain using [fastfall](https://www.npmjs.com/package/fastfall)
+
+* Entirely written in javascript language style
+
+* FisherCodes (status handling) event, same as http codes handling
+
+* Bunch of middlewares [available](https://maxerbox.github.io/fisherman-discord.js/?content=middleware_list)
+
+* Documentation with a tutorial
+
+* Inspired by expressjs and klein, express command creation style with request/response statements (see example below), to be simple
+
+* Promised commands, custom pattern matching with patternCallback option etc...
+
+* Request/response prototype can be edited
+
 ```javascript
 var bot = new fisherMan.Fisherman({ prefixes: ['fish!'] }) // creating a client, with the prefixe "fish!"
 bot.use(middleware) // appending a middleware/plugin to fisherman
