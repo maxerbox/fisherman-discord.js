@@ -31,7 +31,9 @@ __Fisherman features__ :
 
 * Entirely written in javascript language style
 
-* FisherCodes (status handling) event, same as http codes handling
+* FisherCodes (status handling) events, same as http codes handling
+
+* Request/Response/Router prototypes can be edited
 
 * Bunch of middlewares [available](https://maxerbox.github.io/fisherman-discord.js/?content=middleware_list)
 
