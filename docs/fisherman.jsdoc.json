@@ -987,6 +987,28 @@
         "$longname": "Fisherman#aliases"
       },
       {
+        "comment": "/**\r\n         * The discord js client used by fisherman\r\n         * @name Fisherman#client\r\n         * @type {Client}\r\n         */",
+        "meta": {
+          "filename": "fisherman.js",
+          "lineno": 238,
+          "columnno": 7,
+          "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
+          "code": {}
+        },
+        "description": "The discord js client used by fisherman",
+        "name": "client",
+        "type": {
+          "names": [
+            "Client"
+          ]
+        },
+        "memberof": "Fisherman",
+        "longname": "Fisherman#client",
+        "scope": "instance",
+        "kind": "member",
+        "$longname": "Fisherman#client"
+      },
+      {
         "comment": "/**\r\n         * All the commands handled by fisherman\r\n         * @name Fisherman#commands\r\n         * @type {Map.<string, Command>}\r\n         */",
         "meta": {
           "filename": "fisherman.js",
@@ -1012,11 +1034,11 @@
         "comment": "/**\r\n     * Create a new register to add commands\r\n     * @fires Fisherman#registerAdded\r\n     * @param {string} keyName The register key value, to set in the registers map\r\n     * @param {string} [registerName = null] The register's name\r\n     * @param {string} [registerDescription = null] The register's description\r\n     * @return {FisherRegister} Return a FisherRegister instance\r\n     * @memberof Fisherman\r\n     */",
         "meta": {
           "range": [
-            9800,
-            10137
+            10017,
+            10354
           ],
           "filename": "fisherman.js",
-          "lineno": 272,
+          "lineno": 278,
           "columnno": 2,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {
@@ -1117,7 +1139,7 @@
         "comment": "/**\r\n     * Emitted when a fisherCode is by the router, or when something bad happenned\r\n     * @event Fisherman#fisherCode\r\n     * @param {FisherRouter} router the router\r\n     * @param {FisherCode} code the fisherman code\r\n     * @param {Error} err the error\r\n     */",
         "meta": {
           "filename": "response.js",
-          "lineno": 34,
+          "lineno": 33,
           "columnno": 4,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\router",
           "code": {}
@@ -1163,7 +1185,7 @@
         "comment": "/**\r\n     *  Emitted when Fisherman and middlewares are initialized\r\n     * @event Fisherman#initialized\r\n     */",
         "meta": {
           "filename": "fisherman.js",
-          "lineno": 233,
+          "lineno": 234,
           "columnno": 4,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {}
@@ -1180,7 +1202,7 @@
         "comment": "/**\r\n     * Emitted when a new register is added\r\n     * @event Fisherman#registerAdded\r\n     */",
         "meta": {
           "filename": "fisherman.js",
-          "lineno": 273,
+          "lineno": 279,
           "columnno": 4,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {}
@@ -1216,14 +1238,14 @@
         "$longname": "Fisherman#fisherRouterPrototype"
       },
       {
-        "comment": "/**\r\n     * Initialize Fisherman and the middlewares\r\n     * @param {string} [token = null] The token to log in with, optional if the client is already connected\r\n     * @param {function} callback An optional callback to trigger when Fisherman is initialized\r\n     * @memberof Fisherman\r\n     * @fires Fisherman#initialized\r\n     */",
+        "comment": "/**\r\n     * Initialize Fisherman and the middlewares\r\n     * @param {string} [token = null] The token to log in with, optional if the client is already connected\r\n     * @param {function} callback An optional callback to trigger when Fisherman is initialized, an err is passed\r\n     * @example .init('token', err => {if(err) throw err})\r\n     * @memberof Fisherman\r\n     * @fires Fisherman#initialized\r\n     */",
         "meta": {
           "range": [
-            8578,
-            8999
+            8656,
+            9216
           ],
           "filename": "fisherman.js",
-          "lineno": 232,
+          "lineno": 233,
           "columnno": 2,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {
@@ -1258,9 +1280,12 @@
                 "function"
               ]
             },
-            "description": "An optional callback to trigger when Fisherman is initialized",
+            "description": "An optional callback to trigger when Fisherman is initialized, an err is passed",
             "name": "callback"
           }
+        ],
+        "examples": [
+          ".init('token', err => {if(err) throw err})"
         ],
         "memberof": "Fisherman",
         "fires": [
@@ -1381,11 +1406,11 @@
         "comment": "/**\r\n     *\r\n     * Add a middleware to Fisherman\r\n     * @param {(function|Object)} middleware The middleware function|class\r\n     * @return {Fisherman}\r\n     * @memberof Fisherman\r\n     */",
         "meta": {
           "range": [
-            10337,
-            10561
+            10554,
+            10778
           ],
           "filename": "fisherman.js",
-          "lineno": 288,
+          "lineno": 294,
           "columnno": 2,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib",
           "code": {
@@ -2296,176 +2321,193 @@
     ]
   },
   {
-    "comment": "/**\r\n     * Creates an instance of FisherResponse.\r\n     * @param {Fisherman} client\r\n     * @param {FisherRouter} router\r\n     * @memberof FisherResponse\r\n     */",
+    "comment": "/**\r\n *\r\n * The FisheReponse used in a fisherCallback\r\n * @class FisherResponse\r\n */",
     "meta": {
-      "range": [
-        239,
-        483
-      ],
       "filename": "response.js",
-      "lineno": 13,
-      "columnno": 2,
+      "lineno": 1,
+      "columnno": 0,
       "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\router",
-      "code": {
-        "id": "astnode100001860",
-        "name": "FisherResponse",
-        "type": "MethodDefinition",
-        "paramnames": [
-          "client",
-          "router"
-        ]
-      },
-      "vars": {
-        "": null
-      }
+      "code": {}
     },
-    "description": "Creates an instance of FisherResponse.",
-    "params": [
-      {
-        "type": {
-          "names": [
-            "Fisherman"
-          ]
-        },
-        "name": "client"
-      },
-      {
-        "type": {
-          "names": [
-            "FisherRouter"
-          ]
-        },
-        "name": "router"
-      }
-    ],
-    "memberof": "FisherResponse",
-    "name": "FisherResponse",
-    "longname": "FisherResponse.FisherResponse",
+    "description": "The FisheReponse used in a fisherCallback",
     "kind": "class",
-    "scope": "static",
-    "$longname": "FisherResponse.FisherResponse"
-  },
-  {
-    "comment": "/**\r\n     *\r\n     * Same as channel.send()\r\n     * @see https://discord.js.org/#/docs/main/stable/class/TextChannel?scrollTo=send\r\n     * @param {string} text\r\n     * @param {Object} [data = {}]\r\n     * @returns {Promise<Message|Message[]>}\r\n     * @memberof FisherResponse\r\n     */",
-    "meta": {
-      "range": [
-        1391,
-        1477
-      ],
-      "filename": "response.js",
-      "lineno": 53,
-      "columnno": 2,
-      "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\router",
-      "code": {
-        "id": "astnode100001899",
-        "name": "FisherResponse#send",
-        "type": "MethodDefinition",
-        "paramnames": [
-          "text",
-          "data"
-        ]
-      },
-      "vars": {
-        "": null
-      }
-    },
-    "description": "Same as channel.send()",
-    "see": [
-      "https://discord.js.org/#/docs/main/stable/class/TextChannel?scrollTo=send"
-    ],
-    "params": [
+    "name": "FisherResponse",
+    "longname": "FisherResponse",
+    "scope": "global",
+    "$longname": "FisherResponse",
+    "$members": [
       {
-        "type": {
-          "names": [
-            "string"
+        "comment": "/**\r\n     *\r\n     * Same as channel.send()\r\n     * @see https://discord.js.org/#/docs/main/stable/class/TextChannel?scrollTo=send\r\n     * @param {string} text\r\n     * @param {Object} [data = {}]\r\n     * @returns {Promise<Message|Message[]>}\r\n     * @memberof FisherResponse\r\n     */",
+        "meta": {
+          "range": [
+            1400,
+            1486
+          ],
+          "filename": "response.js",
+          "lineno": 52,
+          "columnno": 2,
+          "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\router",
+          "code": {
+            "id": "astnode100001899",
+            "name": "FisherResponse#send",
+            "type": "MethodDefinition",
+            "paramnames": [
+              "text",
+              "data"
+            ]
+          },
+          "vars": {
+            "": null
+          }
+        },
+        "description": "Same as channel.send()",
+        "see": [
+          "https://discord.js.org/#/docs/main/stable/class/TextChannel?scrollTo=send"
+        ],
+        "params": [
+          {
+            "type": {
+              "names": [
+                "string"
+              ]
+            },
+            "name": "text"
+          },
+          {
+            "type": {
+              "names": [
+                "Object"
+              ]
+            },
+            "optional": true,
+            "defaultvalue": "{}",
+            "name": "data"
+          }
+        ],
+        "returns": [
+          {
+            "type": {
+              "names": [
+                "Promise.<(Message|Array.<Message>)>"
+              ]
+            }
+          }
+        ],
+        "memberof": "FisherResponse",
+        "name": "send",
+        "longname": "FisherResponse#send",
+        "kind": "function",
+        "scope": "instance",
+        "$longname": "FisherResponse#send"
+      },
+      {
+        "comment": "/**\r\n     *\r\n     * Emit a \"fisherCode\" event\r\n     * @param {(number|FisherCode)} code The code to send\r\n     * @param {Error} [err = null] An error to pass\r\n     * @fires Fisherman#fisherCode\r\n     * @memberof FisherResponse\r\n     */",
+        "meta": {
+          "range": [
+            737,
+            1106
+          ],
+          "filename": "response.js",
+          "lineno": 32,
+          "columnno": 2,
+          "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\router",
+          "code": {
+            "id": "astnode100001878",
+            "name": "FisherResponse#sendCode",
+            "type": "MethodDefinition",
+            "paramnames": [
+              "code",
+              "err"
+            ]
+          },
+          "vars": {
+            "": null
+          }
+        },
+        "description": "Emit a \"fisherCode\" event",
+        "params": [
+          {
+            "type": {
+              "names": [
+                "number",
+                "FisherCode"
+              ]
+            },
+            "description": "The code to send",
+            "name": "code"
+          },
+          {
+            "type": {
+              "names": [
+                "Error"
+              ]
+            },
+            "optional": true,
+            "defaultvalue": null,
+            "description": "An error to pass",
+            "name": "err"
+          }
+        ],
+        "fires": [
+          "Fisherman#event:fisherCode"
+        ],
+        "memberof": "FisherResponse",
+        "name": "sendCode",
+        "longname": "FisherResponse#sendCode",
+        "kind": "function",
+        "scope": "instance",
+        "$longname": "FisherResponse#sendCode"
+      }
+    ],
+    "$constructor": {
+      "comment": "/**\r\n     * Creates an instance of FisherResponse.\r\n     * @param {Fisherman} client\r\n     * @param {FisherRouter} router\r\n     */",
+      "meta": {
+        "range": [
+          248,
+          492
+        ],
+        "filename": "response.js",
+        "lineno": 12,
+        "columnno": 2,
+        "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\router",
+        "code": {
+          "id": "astnode100001860",
+          "name": "FisherResponse",
+          "type": "MethodDefinition",
+          "paramnames": [
+            "client",
+            "router"
           ]
         },
-        "name": "text"
-      },
-      {
-        "type": {
-          "names": [
-            "Object"
-          ]
-        },
-        "optional": true,
-        "defaultvalue": "{}",
-        "name": "data"
-      }
-    ],
-    "returns": [
-      {
-        "type": {
-          "names": [
-            "Promise.<(Message|Array.<Message>)>"
-          ]
+        "vars": {
+          "": null
         }
-      }
-    ],
-    "memberof": "FisherResponse",
-    "name": "send",
-    "longname": "FisherResponse#send",
-    "kind": "function",
-    "scope": "instance",
-    "$longname": "FisherResponse#send"
-  },
-  {
-    "comment": "/**\r\n     *\r\n     * Emit a \"fisherCode\" event\r\n     * @param {(number|FisherCode)} code The code to send\r\n     * @param {Error} [err = null] An error to pass\r\n     * @fires Fisherman#fisherCode\r\n     * @memberof FisherResponse\r\n     */",
-    "meta": {
-      "range": [
-        728,
-        1097
+      },
+      "description": "Creates an instance of FisherResponse.",
+      "params": [
+        {
+          "type": {
+            "names": [
+              "Fisherman"
+            ]
+          },
+          "name": "client"
+        },
+        {
+          "type": {
+            "names": [
+              "FisherRouter"
+            ]
+          },
+          "name": "router"
+        }
       ],
-      "filename": "response.js",
-      "lineno": 33,
-      "columnno": 2,
-      "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\router",
-      "code": {
-        "id": "astnode100001878",
-        "name": "FisherResponse#sendCode",
-        "type": "MethodDefinition",
-        "paramnames": [
-          "code",
-          "err"
-        ]
-      },
-      "vars": {
-        "": null
-      }
-    },
-    "description": "Emit a \"fisherCode\" event",
-    "params": [
-      {
-        "type": {
-          "names": [
-            "number",
-            "FisherCode"
-          ]
-        },
-        "description": "The code to send",
-        "name": "code"
-      },
-      {
-        "type": {
-          "names": [
-            "Error"
-          ]
-        },
-        "optional": true,
-        "defaultvalue": null,
-        "description": "An error to pass",
-        "name": "err"
-      }
-    ],
-    "fires": [
-      "Fisherman#event:fisherCode"
-    ],
-    "memberof": "FisherResponse",
-    "name": "sendCode",
-    "longname": "FisherResponse#sendCode",
-    "kind": "function",
-    "scope": "instance",
-    "$longname": "FisherResponse#sendCode"
+      "name": "FisherResponse",
+      "longname": "FisherResponse",
+      "kind": "class",
+      "scope": "global",
+      "$longname": "FisherResponse"
+    }
   },
   {
     "comment": "/**\r\n *\r\n *  The router that contains the request and the response\r\n * @class FisherRouter\r\n */",
@@ -3109,7 +3151,7 @@
       "type": "git",
       "url": "https://github.com/maxerbox/fisherman-discord.js.git"
     },
-    "version": "1.0.3",
+    "version": "1.0.4",
     "$longname": "package:fisherman-discord.js"
   },
   {
