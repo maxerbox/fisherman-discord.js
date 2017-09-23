@@ -1,6 +1,6 @@
 {
   "name": "fisherman-discord.js",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Fisherman: A Discord command router, inspired by expressjs | Discord.js library base",
   "main": "./index.js",
   "scripts": {
@@ -20,6 +20,19 @@
     "fastfall": "^1.5.1",
     "lodash": "^4.17.4"
   },
+  "keywords": [
+    "Fisherman",
+    "router",
+    "discord",
+    "framework",
+    "fast",
+    "command",
+    "commands",
+    "middleware",
+    "discord.js",
+    "discord-js",
+    "client"
+  ],
   "homepage": "https://maxerbox.github.io/fisherman-discord.js/",
   "repository": {
     "type": "git",
