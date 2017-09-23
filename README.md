@@ -33,9 +33,9 @@ __Fisherman features__ :
 
 * FisherCodes (status handling) events, same as http codes handling
 
-* Request/Response/Router prototypes can be edited
+* Request/Response/Router prototypes can be edited from everywhere
 
-* Bunch of middlewares [available](https://maxerbox.github.io/fisherman-discord.js/?content=middleware_list)
+* [Bunch of middlewares, like bot typing, embed compatibility, command loader etc...here](https://maxerbox.github.io/fisherman-discord.js/?content=middleware_list)
 
 * Documentation with a tutorial
 
