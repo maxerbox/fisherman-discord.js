@@ -1216,7 +1216,7 @@
         "$longname": "Fisherman#event:registerAdded"
       },
       {
-        "comment": "/**\r\n         * Used to instantiate the FisherRouter\r\n         * @name Fisherman#fisherRouterPrototype\r\n         * @type {FisherRouter}\r\n         */",
+        "comment": "/**\r\n         * Used to instantiate the FisherRouter\r\n         * @name Fisherman#fisherRouterInstancer\r\n         * @type {FisherRouter}\r\n         */",
         "meta": {
           "filename": "fisherman.js",
           "lineno": 27,
@@ -1225,17 +1225,17 @@
           "code": {}
         },
         "description": "Used to instantiate the FisherRouter",
-        "name": "fisherRouterPrototype",
+        "name": "fisherRouterInstancer",
         "type": {
           "names": [
             "FisherRouter"
           ]
         },
         "memberof": "Fisherman",
-        "longname": "Fisherman#fisherRouterPrototype",
+        "longname": "Fisherman#fisherRouterInstancer",
         "scope": "instance",
         "kind": "member",
-        "$longname": "Fisherman#fisherRouterPrototype"
+        "$longname": "Fisherman#fisherRouterInstancer"
       },
       {
         "comment": "/**\r\n     * Initialize Fisherman and the middlewares\r\n     * @param {string} [token = null] The token to log in with, optional if the client is already connected\r\n     * @param {function} callback An optional callback to trigger when Fisherman is initialized, an err is passed\r\n     * @example .init('token', err => {if(err) throw err})\r\n     * @memberof Fisherman\r\n     * @fires Fisherman#initialized\r\n     */",
@@ -2118,42 +2118,18 @@
     "$longname": "FisherRegister.FisherRegister"
   },
   {
-    "comment": "/**\r\n     * Creates an instance of FisherRequest.\r\n     * @param {Fisherman} client\r\n     */",
+    "comment": "/**\r\n * The FisherRequest used in a fisherCallback\r\n * @class FisherRequest\r\n */",
     "meta": {
-      "range": [
-        158,
-        1493
-      ],
       "filename": "request.js",
-      "lineno": 9,
-      "columnno": 2,
+      "lineno": 1,
+      "columnno": 0,
       "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\router",
-      "code": {
-        "id": "astnode100001798",
-        "name": "FisherRequest",
-        "type": "MethodDefinition",
-        "paramnames": [
-          "client"
-        ]
-      },
-      "vars": {
-        "": null
-      }
+      "code": {}
     },
-    "description": "Creates an instance of FisherRequest.",
-    "params": [
-      {
-        "type": {
-          "names": [
-            "Fisherman"
-          ]
-        },
-        "name": "client"
-      }
-    ],
+    "description": "The FisherRequest used in a fisherCallback",
+    "kind": "class",
     "name": "FisherRequest",
     "longname": "FisherRequest",
-    "kind": "class",
     "scope": "global",
     "$longname": "FisherRequest",
     "$members": [
@@ -2161,7 +2137,7 @@
         "comment": "/**\r\n         * The discord.js channel\r\n         * @name FisherRequest#channel\r\n         * @type {GuildChannel}\r\n         * @default null\r\n         */",
         "meta": {
           "filename": "request.js",
-          "lineno": 39,
+          "lineno": 40,
           "columnno": 8,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\router",
           "code": {}
@@ -2184,7 +2160,7 @@
         "comment": "/**\r\n         * The Fisherman client\r\n         * @name FisherRequest#client\r\n         * @type {Fisherman}\r\n         */",
         "meta": {
           "filename": "request.js",
-          "lineno": 53,
+          "lineno": 54,
           "columnno": 8,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\router",
           "code": {}
@@ -2206,7 +2182,7 @@
         "comment": "/**\r\n         * the command if there is one\r\n         * @name FisherRequest#command\r\n         * @type {Command}\r\n         * @default null\r\n         */",
         "meta": {
           "filename": "request.js",
-          "lineno": 18,
+          "lineno": 19,
           "columnno": 8,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\router",
           "code": {}
@@ -2229,7 +2205,7 @@
         "comment": "/**\r\n         * is it a command\r\n         * @name FisherRequest#isCommand\r\n         * @type {boolean}\r\n         * @default false\r\n         * @readonly\r\n         */",
         "meta": {
           "filename": "request.js",
-          "lineno": 10,
+          "lineno": 11,
           "columnno": 8,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\router",
           "code": {}
@@ -2253,7 +2229,7 @@
         "comment": "/**\r\n         * The dicord.js message\r\n         * @name FisherRequest#message\r\n         * @type {Message}\r\n         * @default null\r\n         */",
         "meta": {
           "filename": "request.js",
-          "lineno": 46,
+          "lineno": 47,
           "columnno": 8,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\router",
           "code": {}
@@ -2276,7 +2252,7 @@
         "comment": "/**\r\n         * the prefix trigered\r\n         * @name FisherRequest#prefix\r\n         * @type {string}\r\n         * @default null\r\n         */",
         "meta": {
           "filename": "request.js",
-          "lineno": 32,
+          "lineno": 33,
           "columnno": 8,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\router",
           "code": {}
@@ -2299,7 +2275,7 @@
         "comment": "/**\r\n         * the register of the command\r\n         * @name FisherRequest#register\r\n         * @type {FisherRegister}\r\n         * @default null\r\n         */",
         "meta": {
           "filename": "request.js",
-          "lineno": 25,
+          "lineno": 26,
           "columnno": 8,
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\router",
           "code": {}
@@ -2318,7 +2294,47 @@
         "kind": "member",
         "$longname": "FisherRequest#register"
       }
-    ]
+    ],
+    "$constructor": {
+      "comment": "/**\r\n     * Creates an instance of FisherRequest.\r\n     * @param {Fisherman} client\r\n     */",
+      "meta": {
+        "range": [
+          205,
+          1540
+        ],
+        "filename": "request.js",
+        "lineno": 10,
+        "columnno": 2,
+        "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\router",
+        "code": {
+          "id": "astnode100001798",
+          "name": "FisherRequest",
+          "type": "MethodDefinition",
+          "paramnames": [
+            "client"
+          ]
+        },
+        "vars": {
+          "": null
+        }
+      },
+      "description": "Creates an instance of FisherRequest.",
+      "params": [
+        {
+          "type": {
+            "names": [
+              "Fisherman"
+            ]
+          },
+          "name": "client"
+        }
+      ],
+      "name": "FisherRequest",
+      "longname": "FisherRequest",
+      "kind": "class",
+      "scope": "global",
+      "$longname": "FisherRequest"
+    }
   },
   {
     "comment": "/**\r\n *\r\n * The FisheReponse used in a fisherCallback\r\n * @class FisherResponse\r\n */",
@@ -2587,11 +2603,11 @@
         "$longname": "FisherRouter.buildFromMessage"
       },
       {
-        "comment": "/**\r\n   * Return the FisherRequest class\r\n   * @static\r\n   * @returns {FisherRequest}\r\n   * @memberof FisherRouter\r\n   */",
+        "comment": "/**\r\n   * Return the FisherRequest Class used to instantiate the FisherRequest\r\n   * @static\r\n   * @returns {FisherRequest}\r\n   * @memberof FisherRouter\r\n   */",
         "meta": {
           "range": [
-            1484,
-            1546
+            1522,
+            1584
           ],
           "filename": "router.js",
           "lineno": 55,
@@ -2607,7 +2623,7 @@
             "": null
           }
         },
-        "description": "Return the FisherRequest class",
+        "description": "Return the FisherRequest Class used to instantiate the FisherRequest",
         "scope": "static",
         "returns": [
           {
@@ -2626,11 +2642,11 @@
         "$longname": "FisherRouter.getRequestInstancer"
       },
       {
-        "comment": "/**\r\n   * Return the FisherResponse prototype\r\n   * @static\r\n   * @returns {FisherReponse}\r\n   * @memberof FisherRouter\r\n   */",
+        "comment": "/**\r\n   * Return the FisherResponse Class to instantiate the FisherResponse\r\n   * @static\r\n   * @returns {FisherReponse}\r\n   * @memberof FisherRouter\r\n   */",
         "meta": {
           "range": [
-            1680,
-            1744
+            1748,
+            1812
           ],
           "filename": "router.js",
           "lineno": 64,
@@ -2638,7 +2654,7 @@
           "path": "C:\\Users\\Simon\\Desktop\\FisherMan\\lib\\router",
           "code": {
             "id": "astnode100002009",
-            "name": "FisherRouter.getResponsePrototype",
+            "name": "FisherRouter.getResponseInstancer",
             "type": "MethodDefinition",
             "paramnames": []
           },
@@ -2646,7 +2662,7 @@
             "": null
           }
         },
-        "description": "Return the FisherResponse prototype",
+        "description": "Return the FisherResponse Class to instantiate the FisherResponse",
         "scope": "static",
         "returns": [
           {
@@ -2658,11 +2674,11 @@
           }
         ],
         "memberof": "FisherRouter",
-        "name": "getResponsePrototype",
-        "longname": "FisherRouter.getResponsePrototype",
+        "name": "getResponseInstancer",
+        "longname": "FisherRouter.getResponseInstancer",
         "kind": "function",
         "params": [],
-        "$longname": "FisherRouter.getResponsePrototype"
+        "$longname": "FisherRouter.getResponseInstancer"
       },
       {
         "comment": "/**\r\n         * The fisherman client that instantied the router\r\n         * @name FisherRouter#client\r\n         * @type {Fisherman}\r\n         */",
@@ -3151,7 +3167,7 @@
       "type": "git",
       "url": "https://github.com/maxerbox/fisherman-discord.js.git"
     },
-    "version": "1.0.4",
+    "version": "1.0.5",
     "$longname": "package:fisherman-discord.js"
   },
   {
